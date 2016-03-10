@@ -1,6 +1,6 @@
 var path = require('path');
 var node_modules = path.resolve(__dirname, 'node_modules');
-var pathToReact = path.resolve(node_modules, 'react/dist/react.min.js');
+
 
 var config = {
     entry: [
@@ -8,11 +8,6 @@ var config = {
         'webpack-dev-server/client?http://localhost:8080',
         path.resolve(__dirname, 'app/main.js')
     ],
-     resolve: {
-        alias: {
-          'react': pathToReact
-        }
-    },
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: 'bundle.js'
@@ -37,8 +32,7 @@ var config = {
             },  {
                 test: /\.woff$/,
                 loader: 'url?limit=100000'
-            }],
-          noParse: [pathToReact]
+            }]
     }
 };
 
