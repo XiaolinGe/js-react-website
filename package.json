@@ -1,0 +1,44 @@
+{
+  "name": "website-generator",
+  "version": "1.0.0",
+  "description": "website generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node server.js ",
+    "build": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XiaolinGe/website_generator.git"
+  },
+  "keywords": [
+    "node.js",
+    "website",
+    "generator",
+    "react"
+  ],
+  "author": "XiaolinGe",
+  "license": "  Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/XiaolinGe/website_generator/issues"
+  },
+  "homepage": "https://github.com/XiaolinGe/website_generator#readme",
+  "devDependencies": {
+    "file-loader": "^0.8.5",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.9"
+  },
+  "dependencies": {
+    "babel": "^5.8.34",
+    "babel-core": "^5.8.34",
+    "babel-loader": "^5.4.0",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.2",
+    "node-sass": "^3.4.2",
+    "react": "^0.14.5",
+    "sass-loader": "^3.1.2",
+    "webpack-dev-server": "^1.14.0"
+  }
+}
