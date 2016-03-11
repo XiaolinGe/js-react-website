@@ -1,14 +1,75 @@
-$c: blue;
-$c1: pink;
+$c: #c6c6c5;
+$c1: #2ebdb6;
 $w: 300px;
+
 
 .sass_test {
     width: $w;
     background-color: $c1;    
-p {
-    color: $c;
-  }
+    p {
+        color: $c;
+    }
 
 }
 
 
+body{
+    background-color: gray;
+}
+
+.container {
+    margin-top: 13px;
+}
+.header_nav {
+    width: 100%;
+    height: 78px;
+    background: rgba(28, 28, 28, .5);
+    padding: 0px;
+}
+.single-nav {
+    font-size: 16px;
+    font-weight: 300;
+    color: $c;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    font-size: 16px;
+    font-weight: 300;
+    color: $c;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    &:hover { color: $c1; }
+    &:active { color: $c1; }
+}
+
+.logo {
+    float: left;
+}
+
+.navbar{
+    border-radius: 0;
+}
+.navbar-inverse {
+    border: 0;
+}
+.navbar-collapse {
+    border: 0;
+}
+
+#basic-nav-dropdown {
+    background-color: transparent;
+}
+
+.dropdown-menu {
+    margin-top: 15px;
+    background-color: transparent;
+    li {
+        a {
+            &:hover {background-color: transparent;
+                     color: $c1;
+                    }
+        }
+    }
+}
