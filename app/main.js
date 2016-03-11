@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MyReactBootstrapButton from './layout';
+import MyReactBootstrapNavbarInstance from './layout';
 main();
 
 
 function main() {
-  ReactDOM.render(<MyReactBootstrapButton />, document.getElementById("app"));
+  ReactDOM.render(<MyReactBootstrapNavbarInstance />, document.getElementById("app"));
 }
