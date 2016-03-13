@@ -1,0 +1,8 @@
+$debug: true;
+
+@mixin debug-border { border: 1px solid red; }
+
+html, body {
+    margin: 0 auto;
+    height: 100%;
+}

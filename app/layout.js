@@ -5,11 +5,9 @@ import { Nav } from 'react-bootstrap';
 import { NavItem } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
 import { MenuItem } from 'react-bootstrap';
-
 import { Image } from 'react-bootstrap';
 
-
-class ImageResponsiveInstance extends React.Component {
+class Logo extends React.Component {
   render() {
     return (<Image src="images/logo.png" className='logo' responsive />);
 
@@ -17,16 +15,16 @@ class ImageResponsiveInstance extends React.Component {
 };
 
 
-
-export default class MyReactBootstrapNavbarInstance extends React.Component {
+export default class Layout extends React.Component {
   render() {
+    let navLanguage =Object.keys(language).length;
     return (
       <div>
       <Navbar inverse className='header_nav'>
 
       <Navbar.Header>
       <Navbar.Brand>
-      <ImageResponsiveInstance />
+      <Logo />
       </Navbar.Brand>
       <Navbar.Toggle />
       </Navbar.Header>
@@ -34,18 +32,12 @@ export default class MyReactBootstrapNavbarInstance extends React.Component {
       <Navbar.Collapse>
 
       <Nav>
-      <NavItem eventKey={1} href="#">HOME</NavItem>
-      <NavItem eventKey={2} href="#">ABOUT</NavItem>
-      <NavItem eventKey={3} href="#">PORTFOLIO</NavItem>
-      <NavItem eventKey={4} href="#">SERVICES</NavItem>
-      <NavItem eventKey={5} href="#">FAQ</NavItem>
-      <NavItem eventKey={6} href="#">CONTACT</NavItem>
+      {menu.map( ({link,display},index) => (<NavItem key={index}  eventKey={index} href={link}>{display}</NavItem>) )}
       </Nav>
 
       <Nav pullRight>
-      <NavDropdown eventKey={2} title="Language" id="basic-nav-dropdown">
-      <MenuItem eventKey={2.1}>English</MenuItem>
-      <MenuItem eventKey={2.2}>Chinese</MenuItem>
+      <NavDropdown eventKey={navLanguage} title="Language" id="basic-nav-dropdown">
+      {language.map( ({language},index) => (<MenuItem key={index} eventKey={2.+{index}}>{language}</MenuItem>) )}
       </NavDropdown>
       </Nav>
 
@@ -55,3 +47,20 @@ export default class MyReactBootstrapNavbarInstance extends React.Component {
       </div>);
   }
 };
+
+
+let menu = [
+  {link: "#", display: "HOME"},
+  {link: "#", display: "ABOUT"},
+  {link: "#", display: "PORTFOLIO"},
+  {link: "#", display: "SERVICES"},
+  {link: "#", display: "HOFAQME"},
+  {link: "#", display: "CONTACT"}
+];
+
+
+let language = [
+  {language: "English"},
+  {language: "Chinese"},
+  {language: "Japnese"}
+];
