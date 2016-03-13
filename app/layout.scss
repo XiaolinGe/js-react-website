@@ -1,0 +1,62 @@
+@import './common.scss';
+$c: #c6c6c5;
+$c1: #2ebdb6;
+$ct: transparent;
+
+
+body{
+    background-color: gray;
+}
+
+.container {
+    margin-top: 13px;
+}
+
+.header_nav {
+    width: 100%;
+    height: 78px;
+    padding: 0;
+    @if $debug {@include debug-border;}
+    @if $debug { background: rgba(28, 28, 28, .5)};
+}
+
+
+
+.navbar-inverse .navbar-nav>li>a {
+    font-size: 16px;
+    font-weight: 300;
+    color: $c;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    &:hover { color: $c1; }
+    &:active { color: $c1; }
+}
+
+.logo {
+    float: left;
+}
+
+.navbar{
+    border-radius: 0;
+}
+.navbar-inverse,
+.navbar-collapse {
+    border: 0;
+}
+
+
+#basic-nav-dropdown {
+    background-color: $ct;
+}
+
+.dropdown-menu {
+    margin-top: 15px;
+    background-color: $ct;
+    li {
+        a {
+            &:hover {background-color: $ct;
+                     color: $c1;
+                    }
+        }
+    }
+}
