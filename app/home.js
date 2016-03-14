@@ -12,7 +12,7 @@ class Banner extends React.Component {
   render() {
     return (
       <Grid id="index_banner">
-      <Row className="show-grid">
+      <Row className="show-grid banner_images">
 
       <Col xs={3} md={2}>
       <Image  src="images/trusted-photos-large.png" alt="trusted" id="trusted" responsive />
@@ -27,7 +27,7 @@ class Banner extends React.Component {
 
       </Row>
 
-      <Row className="show-grid">
+      <Row className="show-grid banner_text">
       <Col>
       <p id="professional_text"  className="fadeInUp" style={{animationDelay:'1.3s', animationDuration: '3s', zIndex: '5',}}>
       Professional 360&#176; tours . Attract more customers with Google TM Business Photos!
