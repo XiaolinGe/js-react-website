@@ -1,4 +1,15 @@
 @import './common.scss';
+$ctheme: #2ebdb6;
+
+$cgreen: #53aa46;
+$cblue: #0083c5;
+$cred: #e51751;
+$cliblue: #2ebdb6;
+
+$cligray: #575757;
+$cdagray: #3c3c3c;
+
+$ctext: #585858;
 
 #index_banner {
     width: 100%;
@@ -38,8 +49,7 @@
     z-index: 8;
 }
 
-#professional_text
-{
+#professional_text {
   color: #ffffff;
   font-weight: 200;
   font-family: 'Open Sans', sans-serif;
@@ -67,4 +77,103 @@
 .row{
   padding: 0;
   margin: 0;
+}
+
+
+
+#green_button {
+    background: $cgreen;
+}
+
+#blue_button {
+    background: $cblue;
+}
+
+#red_button {
+    background: $cred;
+}
+
+#orange_button {
+    background: $cliblue;
+}
+
+.index_button {
+    width: 237px;
+    display: block;
+    padding: 0 0 4px 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-decoration: none;
+    margin: 20px auto;
+
+    span {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 1px rgba(0,0,0,.25);
+    line-height: 17px;
+    height: 48px;
+    padding: 8px 0 0 0;
+    width: 237px;
+    background: $cligray;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    &:hover { background: $cdagray;}
+    }
+}
+
+
+
+
+#index_button {
+    width: 75%;
+    border-bottom: dashed 1px #d0d0d0;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+
+#index_work {
+    width: 75%;
+    border-bottom: dashed 1px #d0d0d0;
+    margin: 0 auto;
+    padding: 40px 0;
+    #work_intro {
+       height: 160px;
+       margin: 20px auto;
+
+h2 {
+font-size: 21px;
+    font-weight: 400;
+    line-height: 100%;
+    margin: 0;
+    margin-bottom: 15px;
+    color: $ctext;
+}
+
+p {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 20px;
+}
+a{
+display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: $ctheme;
+    float: left;
+    clear: both;
+    margin-top: 30px;
+}
+  }
+
 }

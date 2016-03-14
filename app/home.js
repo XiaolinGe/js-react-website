@@ -1,16 +1,13 @@
 import React from 'react';
 import './home.scss';
-import { Grid } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
-import { Image } from 'react-bootstrap';
+import { Grid, Row, Col, Image} from 'react-bootstrap';
 
 
-export default class Banner extends React.Component {
+
+class Banner extends React.Component {
   constructor(props) {
     super(props);
   }
-
 
   render() {
     return (
@@ -39,6 +36,126 @@ export default class Banner extends React.Component {
       </Row>
 
       </Grid>
+    );
+  }
+};
+
+
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <Grid id="index_button">
+      <Row className="show-grid">
+
+      <Col  md={3}>
+      <a href="#googleVideo" className="index_button" id="green_button" style={{textDecoration: 'none',}}>
+      <span>What are Google Business Photos?</span>
+      </a>
+      </Col>
+
+      <Col  md={3}>
+      <a href="#googleVideo" className="index_button" id="blue_button" style={{textDecoration: 'none',}}>
+      <span>Benefits of Google Business Photos?</span>
+      </a>
+      </Col>
+
+      <Col  md={3}>
+      <a href="#googleVideo" className="index_button" id="red_button" style={{textDecoration: 'none',}}>
+      <span>Take a Look at Our Portfolio</span>
+      </a>
+      </Col>
+
+      <Col  md={3}>
+      <a href="#googleVideo" className="index_button" id="orange_button" style={{textDecoration: 'none',}}>
+      <span>Please contact us</span>
+      </a>
+      </Col>
+
+      </Row>
+      </Grid>
+    );
+  }
+};
+
+
+class Work extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <Grid id="index_work">
+      <Row className="show-grid">
+
+      <Col  md={3} id="work_intro">
+      <h2>Our Work</h2>
+      <p>Here’s a selection of our recent work, click the links to take a look.</p>
+      <a  href="portfolio_en.html">View our portfolio »</a>
+      </Col>
+
+
+      <Col  md={9} id="work_images">
+      <Row className="show-grid">
+
+      <Col  md={4} >
+      <a href="#">
+      <Image src="workImages/mekongBaby.jpg" responsive alt="mekongBaby" id="mekongBaby" className="fadeInUp" />
+      </a>
+      </Col>
+
+      <Col  md={4} >
+      <a href="#">
+      <Image src="workImages/mekongBaby.jpg" responsive alt="mekongBaby" id="mekongBaby" className="fadeInUp" />
+      </a>
+      </Col>
+
+      <Col  md={4} >
+      <a href="#">
+      <Image src="workImages/mekongBaby.jpg" responsive alt="mekongBaby" id="mekongBaby" className="fadeInUp" />
+      </a>
+      </Col>
+
+      </Row>
+      </Col>
+
+      </Row>
+      </Grid>
+
+    );
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export default class Home extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+      <Banner />
+      <Button />
+      <Work />
+      </div>
     );
   }
 };
