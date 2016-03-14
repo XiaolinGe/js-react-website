@@ -137,7 +137,7 @@ $ctext: #585858;
 }
 
 #index_work,
-#whyUs_work
+#index_whyUs
 {
     width: 75%;
     border-bottom: dashed 1px #d0d0d0;
@@ -210,3 +210,47 @@ p {
     color: $ctext;
 }
 }
+
+
+#index_ourVideos {
+    width: 75%;
+    margin: 20px auto;
+    padding: 20px 0;
+    padding-bottom: 0;
+
+#ourVideos_intro{
+
+h2{
+font-size: 21px;
+    font-weight: 400;
+    line-height: 100%;
+    margin-bottom: 15px;
+    color: #585858;
+    }
+
+p {
+display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 20px;
+    color: $ctext;
+}
+}
+}
+
+#ourVideos_button {
+span {
+padding: 16px 0 0 0;
+}
+}
+
+#index_videos{
+    width: 75%;
+    margin: 20px auto;
+    padding: 40px 0;
+    .videos {
+    margin-bottom: 10px;
+}
+
+    }

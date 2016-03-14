@@ -1,6 +1,6 @@
 import React from 'react';
 import './home.scss';
-import { Grid, Row, Col, Image} from 'react-bootstrap';
+import { Grid, Row, Col, Image, ResponsiveEmbed} from 'react-bootstrap';
 
 
 
@@ -137,7 +137,7 @@ class WhyUs extends React.Component {
 
   render() {
     return (
-      <Grid id="whyUs_work">
+      <Grid id="index_whyUs">
       <Row className="show-grid">
 
       <Col  md={3} id="whyUs_intro">
@@ -158,6 +158,34 @@ class WhyUs extends React.Component {
       <p>Our team specialise in creating stunning 360° virtual tours for business owners. These allow customers to browse your premises through Google’s Street View interface and find out more about your business.</p>
       </Col>
 
+      </Row>
+      </Grid>
+    );
+  }
+};
+
+
+
+class OurVideos extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <Grid id="index_ourVideos">
+      <Row className="show-grid">
+
+      <Col  md={9} id="ourVideos_intro">
+      <h2 id="googleVideo">Our Videos</h2>
+      <p>If you’re having trouble understanding what we do, take a look at the videos from Google™ below.</p>
+      </Col>
+
+      <Col  md={3}  id="ourVideos_button">
+      <a href="portfolio_en.html" className="index_button" id="red_button" style={{textDecoration: 'none',}}>
+      <span>View Our Portfolio</span>
+      </a>
+      </Col>
 
       </Row>
       </Grid>
@@ -166,6 +194,36 @@ class WhyUs extends React.Component {
 };
 
 
+
+
+
+class Videos extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <Grid id="index_videos">
+      <Row className="show-grid">
+
+      <Col  md={6} id="videos_1" className="videos">
+      <ResponsiveEmbed a16by9>
+      <embed type="image/svg+xml" src="//www.youtube.com/embed/Lw9KchtyqFI" />
+      </ResponsiveEmbed>
+      </Col>
+
+      <Col  md={6}  id="videos_2" className="videos">
+      <ResponsiveEmbed a16by9>
+      <embed type="image/svg+xml" src="//www.youtube.com/embed/kMWxBpM-MSA" />
+      </ResponsiveEmbed>
+      </Col>
+
+      </Row>
+      </Grid>
+    );
+  }
+};
 
 
 
@@ -185,6 +243,8 @@ export default class Home extends React.Component {
       <Button />
       <Work />
       <WhyUs />
+      <OurVideos />
+      <Videos />
       </div>
     );
   }
