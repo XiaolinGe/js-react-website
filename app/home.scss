@@ -129,8 +129,6 @@ $ctext: #585858;
 }
 
 
-
-
 #index_button {
     width: 75%;
     border-bottom: dashed 1px #d0d0d0;
@@ -138,16 +136,17 @@ $ctext: #585858;
     padding: 0;
 }
 
-
-
-#index_work {
+#index_work,
+#whyUs_work
+{
     width: 75%;
     border-bottom: dashed 1px #d0d0d0;
     margin: 0 auto;
     padding: 40px 0;
-    #work_intro {
+    #work_intro,
+    #whyUs_intro
+{
        height: 160px;
-       margin: 20px auto;
 
 h2 {
 font-size: 21px;
@@ -176,4 +175,38 @@ display: block;
 }
   }
 
+}
+
+
+#work_intro{
+margin: 20px auto;
+}
+
+#whyUs_intro {
+margin: 0 0 20px 0;
+}
+
+
+
+#whyUs_image{
+width: 173px;
+    height: 133px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#whyUs_explain {
+h4 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 100%;
+    margin: 0;
+    color: #0085c8;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+p {
+    line-height: 150%;
+    color: $ctext;
+}
 }

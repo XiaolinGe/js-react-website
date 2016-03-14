@@ -130,11 +130,40 @@ class Work extends React.Component {
   }
 };
 
+class WhyUs extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <Grid id="whyUs_work">
+      <Row className="show-grid">
+
+      <Col  md={3} id="whyUs_intro">
+      <h2>Why Us?</h2>
+      <p>We’ve been recognised by Google™ as a trusted photographer, so you can be sure we’re qualified to provide
+      a quality service.</p>
+      <a href="about_en.html">Read more about Jibble »</a>
+      </Col>
+
+      <Col  md={2}  id="whyUs_image">
+      <Image src="images/trusted-photos-large.png" responsive alt="trusted" id="trusted"  />
+      </Col>
+
+      <Col  md={7}  id="whyUs_explain">
+      <h4>Google Trusted Photographer</h4>
+      <p>Jibble 360 is a “Google Trusted Photographer” based in Auckland, New Zealand. We take pride in exceeding all expectations and deliver results that continue to surprise.</p>
+
+      <p>Our team specialise in creating stunning 360° virtual tours for business owners. These allow customers to browse your premises through Google’s Street View interface and find out more about your business.</p>
+      </Col>
 
 
-
-
-
+      </Row>
+      </Grid>
+    );
+  }
+};
 
 
 
@@ -155,6 +184,7 @@ export default class Home extends React.Component {
       <Banner />
       <Button />
       <Work />
+      <WhyUs />
       </div>
     );
   }
