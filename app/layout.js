@@ -1,21 +1,86 @@
 import React from 'react';
 import "./layout.scss";
-import { Navbar } from 'react-bootstrap';
-import { Nav } from 'react-bootstrap';
-import { NavItem } from 'react-bootstrap';
-import { NavDropdown } from 'react-bootstrap';
-import { MenuItem } from 'react-bootstrap';
-import { Image } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Grid, Row, Col, Image, ResponsiveEmbed, } from 'react-bootstrap';
 
 class Logo extends React.Component {
   render() {
     return (<Image src="images/logo.png" className='logo' responsive />);
-
   }
 };
 
 
-export default class Layout extends React.Component {
+
+export default class Footer extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <Grid className="footer" >
+
+      <Row className="show-grid" id="footer_top">
+      <Col  md={3} className="footer_logo">
+      <a href="index_cn.html">
+      <Image src="images/logo.png" className='logo' responsive />
+      </a>
+      </Col>
+      <Col  md={6} className="footer_span">
+      <div></div>
+      </Col>
+      <Col  md={3} className="footer_button">
+      <a href="#"  style={{textDecoration: 'none',}}>
+      <span>Please contact us</span>
+      </a>
+      </Col>
+      </Row>
+
+      <Row className="show-grid" id="footer_bottom">
+      <Col  md={2} className="footer_wechat">
+      <Image src="images/weixin.jpg" alt="wechat" className='wechat' responsive />
+      </Col>
+      <Col  md={3} className="footer_info">
+      <p>Lynn</p>
+      <span>
+      PO Box 36393,<br />
+      Northcote 0748,<br />
+      Auckland,<br />
+      New Zealand<br /><br />
+
+      Phone:  <a href="tel:022023352">  &nbsp;021 202 3352</a><br />
+      Email: <a href="mailto:nzgezilin@gmail.com"> &nbsp;nzgezilin@gmail.com</a>
+      </span>
+      </Col>
+      <Col  md={7} className="footer_menu">
+
+      <ul>
+      {footerMenu.map( ({link,display},index) =>
+        (
+          <li key={index}>
+          <a href={link}  id={display}>
+         {display}</a>
+          </li>
+        ) )}
+
+      </ul>
+      <p className="copyright">Copyright © 2015 LYNN. All Rights Reserved.</p>
+      </Col>
+      </Row>
+
+
+      </Grid>
+    );
+  }
+
+}
+
+
+
+
+
+
+
+class Layout extends React.Component {
   render() {
     let navLanguage =Object.keys(language).length;
     return (
@@ -54,7 +119,7 @@ let menu = [
   {link: "#", display: "ABOUT"},
   {link: "#", display: "PORTFOLIO"},
   {link: "#", display: "SERVICES"},
-  {link: "#", display: "HOFAQME"},
+  {link: "#", display: "FAQ"},
   {link: "#", display: "CONTACT"}
 ];
 
@@ -63,4 +128,14 @@ let language = [
   {language: "English"},
   {language: "Chinese"},
   {language: "Japnese"}
+];
+
+let footerMenu = [
+  {link: "#", display: "home"},
+  {link: "#", display: "about"},
+  {link: "#", display: "portfolio"},
+  {link: "#", display: "services"},
+  {link: "#", display: "faq"},
+  {link: "#", display: "contact"},
+  {link: "#", display: "facebook"},
 ];
