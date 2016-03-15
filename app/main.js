@@ -7,5 +7,5 @@ main();
 
 
 function main() {
-  ReactDOM.render(<Home />, document.getElementById("app"));
+  ReactDOM.render(<Layout />, document.getElementById("app"));
 }
