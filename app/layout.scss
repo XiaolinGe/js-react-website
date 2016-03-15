@@ -12,6 +12,8 @@ $ct: transparent;
     width: 100%;
     height: 78px;
     padding: 0;
+    position: fixed;
+    z-index: 100;
     @if $debug {@include debug-border;}
     @if $debug { background: rgba(28, 28, 28, .5)};
 

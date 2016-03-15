@@ -2,6 +2,8 @@ import React from 'react';
 import "./layout.scss";
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Grid, Row, Col, Image, ResponsiveEmbed, } from 'react-bootstrap';
 
+import Home from './home';
+
 class Logo extends React.Component {
   render() {
     return (<Image src="images/logo.png" className='logo' responsive />);
@@ -106,7 +108,7 @@ export default class Layout extends React.Component {
       </Navbar>
 
       <div>
-      {this.props.children}
+      <Home />
       </div>
 
       <Footer />
