@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Footer from './layout';
+import Layout from './layout';
 
 import Home from './home';
 main();
 
 
 function main() {
-  ReactDOM.render(<Footer />, document.getElementById("app"));
+  ReactDOM.render(<Layout />, document.getElementById("app"));
 }

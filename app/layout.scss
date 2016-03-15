@@ -14,6 +14,12 @@ $ct: transparent;
     padding: 0;
     @if $debug {@include debug-border;}
     @if $debug { background: rgba(28, 28, 28, .5)};
+
+    ul{
+        margin-left: 160px;
+        li {
+        }
+    }
 }
 
 

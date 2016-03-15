@@ -10,7 +10,7 @@ class Logo extends React.Component {
 
 
 
-export default class Footer extends React.Component {
+class Footer extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -80,35 +80,36 @@ export default class Footer extends React.Component {
 
 
 
-class Layout extends React.Component {
+export default class Layout extends React.Component {
   render() {
+    let {menus} = this.props;
     let navLanguage =Object.keys(language).length;
     return (
       <div>
       <Navbar inverse className='header_nav'>
-
       <Navbar.Header>
       <Navbar.Brand>
       <Logo />
       </Navbar.Brand>
       <Navbar.Toggle />
       </Navbar.Header>
-
       <Navbar.Collapse>
-
       <Nav>
       {menu.map( ({link,display},index) => (<NavItem key={index}  eventKey={index} href={link}>{display}</NavItem>) )}
       </Nav>
-
       <Nav pullRight>
       <NavDropdown eventKey={navLanguage} title="Language" id="basic-nav-dropdown">
       {language.map( ({language},index) => (<MenuItem key={index} eventKey={2.+{index}}>{language}</MenuItem>) )}
       </NavDropdown>
       </Nav>
-
       </Navbar.Collapse>
-
       </Navbar>
+
+      <div>
+      {this.props.children}
+      </div>
+
+      <Footer />
       </div>);
   }
 };
