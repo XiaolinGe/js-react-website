@@ -1,0 +1,64 @@
+@import './common.scss';
+
+
+.faq {
+    width: 75%;
+    margin: 20px auto;
+    padding: 40px 0;
+
+    .faq_image {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+        h2 {
+            margin: 0;
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 100%;
+            margin-bottom: 15px;
+            color: $ctext;
+        }
+        p {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 140%;
+            margin-bottom: 20px;
+            color: $ctext;
+        }
+        .trusted {
+            display: block;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+    }
+    .faq_intro {
+        float: left;
+        border-left: dashed 1px #d0d0d0;
+        padding: 0 0 0 40px;
+
+        h3 {
+            font-size: 21px;
+            font-weight: 700;
+            color: #2ebdb6;
+            line-height: 100%;
+            padding: 15px 0;
+        }
+        p {
+            line-height: 150%;
+            margin-bottom: 15px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            color: $ctext;
+
+        }
+    }
+}
+
+
+.layout_banner {
+    width: 100%;
+    height: 280px;
+}
