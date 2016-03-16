@@ -4,6 +4,8 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Grid, Row, Col, Image, Res
 
 import Home from './home';
 import About from './about';
+import Portfolio from './portfolio';
+
 
 class Logo extends React.Component {
     render() {
@@ -121,7 +123,7 @@ export default class Layout extends React.Component {
         return (
             <div>
             <Header />
-            <About />
+            <Portfolio />
 
             <Footer />
             </div>);

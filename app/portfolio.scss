@@ -1,0 +1,11 @@
+@import './common.scss';
+
+.portfolio_grid {
+    width: 75%;
+    margin: 20px auto;
+    padding: 40px 0;
+    padding-bottom: 20px;
+    .portfolio_row {
+        margin-bottom: 20px;
+    }
+}
