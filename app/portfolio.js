@@ -14,19 +14,20 @@ class PortfolioRow extends  React.Component {
    let portfolio = this.props.portfolio;
     console.log(portfolio);
     return (
-      <Grid className="portfolioRow">
-      <Row className="show-grid" >
-      {portfolio.map((i,index) => (i.map( ({href, src, alt, id},index) =>
+      <Grid className="portfolio_grid">
+      {portfolio.map((e,index) => (
+      <Row className="show-grid portfolio_row" key={index} >
+       {e.map( ({href, src, alt, id},index) =>
         (
-          <Col md={3} key={index}>
+          <Col md={3} key={index} className="portfolio_single">
           <a href={href}>
           <Image src={src} responsive alt={alt} id={id} className="portfolio_image" />
           </a>
           </Col>
-        ))))
-}
+        ))}
 
-      </Row>
+        </Row>
+      ) ) }
       </Grid>
 
     );
