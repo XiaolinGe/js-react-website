@@ -66,6 +66,23 @@ $ct: transparent;
 }
 
 
+.layout_banner {
+    width: 100%;
+    height: 280px;
+    background: url("../public/images/slide-01-bg.jpg") no-repeat top left;
+
+    h1 {
+        font-size: 700%;
+        font-weight: 800;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 205px;
+        letter-spacing: -1px;
+        padding: 55px 0 0 0;
+    }
+}
+
 .footer {
     width: 100%;
     background-color: #3c3c3c;
@@ -180,7 +197,7 @@ $ct: transparent;
 }
 
 .footer_menu {
-            float: right;
+    float: right;
     ul {
         display: block;
         float: right;
@@ -203,15 +220,15 @@ $ct: transparent;
     }
 
     .copyright {
-    display: block;
-    float: right;
-    clear: both;
-    font-size: 12px;
-    font-weight: 400;
-    color: #c6c6c6;
-    line-height: 100%;
-    padding: 12px 0 0 0;
-}
+        display: block;
+        float: right;
+        clear: both;
+        font-size: 12px;
+        font-weight: 400;
+        color: #c6c6c6;
+        line-height: 100%;
+        padding: 12px 0 0 0;
+    }
     
 }
 
