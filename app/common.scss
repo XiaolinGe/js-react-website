@@ -1,4 +1,5 @@
 $ctheme: #2ebdb6;
+$ctext: #585858;
 
 $cgreen: #53aa46;
 $cblue: #0083c5;
@@ -7,9 +8,6 @@ $cliblue: #2ebdb6;
 
 $cligray: #575757;
 $cdagray: #3c3c3c;
-
-$ctext: #585858;
-
 
 
 $debug: true;
@@ -22,44 +20,61 @@ html, body {
 }
 
 
+@mixin limit {
+    width: 75%;
+    margin: 20px auto;
+    padding: 40px 0;
+}
+
+@mixin no_mp {
+    margin: 0;
+    padding: 0;
+}
+
+
+@mixin left_dashed {
+    float: left;
+    border-left: dashed 1px #d0d0d0;
+    padding: 0 0 0 40px;
+}
 
 
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    transform: translateY(20px);
-      visibility: hidden;
-  }
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+        visibility: hidden;
+    }
 
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-    visibility: visible;
-  }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        visibility: visible;
+    }
 }
 
 @-webkit-keyframes fadeInUp  /*Safari and Chrome*/ {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-    visibility: hidden;
-  }
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+        visibility: hidden;
+    }
 
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    visibility: visible;
-  }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        visibility: visible;
+    }
 }
 
 
 .fadeInUp {
-  animation-name: fadeInUp;
-  -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
 }

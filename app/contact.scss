@@ -2,18 +2,15 @@
 
 
 .contact {
-    width: 75%;
-    margin: 20px auto;
-    padding: 40px 0;
+
+    @include limit;
 
     .contact_info {
-        margin: 0;
-        padding: 0;
+        @include no_mp;
         margin-bottom: 20px;
         .logo {
+            @include no_mp;
             display: block;
-            margin: 0;
-            padding: 0;
             border: 0;
             margin-bottom: 20px;
         }
@@ -39,33 +36,11 @@
             border: 0;
         }
     }
-    .about_intro {
-        float: left;
-        border-left: dashed 1px #d0d0d0;
-        padding: 0 0 0 40px;
-        p {
-            line-height: 150%;
-            margin-bottom: 15px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 12px;
-            font-weight: 400;
-            color: $ctext;
-
-            a {
-                color: #1B242F;
-                text-decoration: none;
-
-                &:hover {color: $ctheme;}
-            }
-        }
-    }
 }
 
 
 .contact_form{
-
-    border-left: dashed 1px #d0d0d0;
-    padding: 0 0 0 40px;
+    @include left_dashed;
     margin: 40px 0;
     margin-top: 0;
     p {
@@ -100,7 +75,7 @@
     text-shadow: 0 1px rgba(0,0,0,.25);
     line-height: 26px;
     width: 100%;
-    background: #2ebdb6;
+    background: $ctheme;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -112,9 +87,8 @@
 
 
 .contact_map {
+    @include left_dashed;
     height: 390px;
-    border-left: dashed 1px #d0d0d0;
-    padding: 0 0 0 40px;
     margin: 40px 0;
     margin-top: 0;
 }
