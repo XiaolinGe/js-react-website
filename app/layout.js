@@ -6,6 +6,7 @@ import Home from './home';
 import About from './about';
 import Portfolio from './portfolio';
 import Services from './services';
+import Faq from './faq';
 
 class Logo extends React.Component {
     render() {
@@ -123,7 +124,7 @@ export default class Layout extends React.Component {
         return (
             <div>
             <Header />
-            <Services />
+            <Faq />
 
             <Footer />
             </div>);
