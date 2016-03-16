@@ -3,6 +3,7 @@ import "./layout.scss";
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Grid, Row, Col, Image, ResponsiveEmbed, } from 'react-bootstrap';
 
 import Home from './home';
+import About from './about';
 
 class Logo extends React.Component {
     render() {
@@ -120,7 +121,7 @@ export default class Layout extends React.Component {
         return (
             <div>
             <Header />
-            <Home />
+            <About />
 
             <Footer />
             </div>);

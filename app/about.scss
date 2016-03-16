@@ -1,0 +1,70 @@
+@import './common.scss';
+
+
+.about {
+    width: 75%;
+    margin: 20px auto;
+    padding: 40px 0;
+
+    .about_image {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+        h2 {
+            margin: 0;
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 100%;
+            margin-bottom: 15px;
+            color: $ctext;
+        }
+        p {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 140%;
+            margin-bottom: 20px;
+            color: $ctext;
+        }
+        a {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 140%;
+            margin-bottom: 20px;
+            color: $ctheme;
+        }
+        .trusted {
+            display: block;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+    }
+    .about_intro {
+        float: left;
+        border-left: dashed 1px #d0d0d0;
+        padding: 0 0 0 40px;
+        p {
+            line-height: 150%;
+            margin-bottom: 15px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            color: $ctext;
+
+            a {
+color: #1B242F;
+text-decoration: none;
+
+&:hover {color: $ctheme;}
+            }
+        }
+    }
+}
+
+
+.layout_banner {
+    width: 100%;
+    height: 280px;
+}
