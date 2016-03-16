@@ -2,6 +2,8 @@ import React from 'react';
 import './contact.scss';
 import { Grid, Row, Col, Image, ResponsiveEmbed, Input, ButtonInput,} from 'react-bootstrap';
 
+import Map from './map';
+
 export default class About extends React.Component {
   constructor(props) {
     super(props);
@@ -44,7 +46,7 @@ export default class About extends React.Component {
       </Col>
 
       <Col  md={5} className="contact_map">
-
+      <Map />
       </Col>
 
       </Row>
