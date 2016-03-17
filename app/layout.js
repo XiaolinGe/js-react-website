@@ -65,7 +65,7 @@ class Footer extends React.Component {
             </Col>
             <Col  md={3} className="footer_button">
             <a href="#"  style={{textDecoration: 'none',}}>
-            <span>{footerInfo.button}</span>
+          <span>Please contact us</span>
             </a>
             </Col>
             </Row>
@@ -75,15 +75,15 @@ class Footer extends React.Component {
             <Image src={'images/'+images.wechat} alt="wechat" className='wechat' responsive />
             </Col>
             <Col  md={3} className="footer_info">
-             <p>{footerInfo.name}</p>
-            <span>
-            {footerInfo.pobox}<br />
-            {footerInfo.district}<br />
-            {footerInfo.city}<br />
-            {footerInfo.country}<br /><br />
+          <p>{Info.name}</p>
+          <span>
+          {Info.pobox}<br />
+          {Info.district}<br />
+          {Info.city}<br />
+          {Info.country}<br /><br />
 
-            Phone:  <a href={'tel:'+footerInfo.phone}>  &nbsp;{footerInfo.phone}</a><br />
-            Email: <a href={'mailto:'+footerInfo.email}> &nbsp;{footerInfo.email}</a>
+          Phone:  <a href={'tel:'+Info.phone}>  &nbsp;{Info.phone}</a><br />
+          Email: <a href={'mailto:'+Info.email}> &nbsp;{Info.email}</a>
             </span>
             </Col>
             <Col  md={7} className="footer_menu">
@@ -97,7 +97,7 @@ class Footer extends React.Component {
                 ) )}
 
             </ul>
-            <p className="copyright">{footerInfo.copyright}</p>
+            <p className="copyright">{Info.copyright}</p>
             </Col>
             </Row>
 
@@ -118,7 +118,7 @@ export default class Layout extends React.Component {
         return (
             <div>
             <Header />
-            <Portfolio />
+            <About />
 
             <Footer />
             </div>);
@@ -158,7 +158,7 @@ let images = {
     wechat: "weixin.jpg"
 };
 
-let footerInfo = {
+let Info = {
     name: "Lynn",
     pobox: "PO Box 36393,",
     district: "Northcote 0748,",
@@ -166,6 +166,5 @@ let footerInfo = {
     country: "New Zealand",
     phone: "021 202 335",
     email: "nzgezilin@gmail.com",
-    button: "Please contact us",
     copyright: "Copyright © 2015 LYNN. All Rights Reserved."
 };

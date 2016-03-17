@@ -1,5 +1,5 @@
 import React from 'react';
-import './portfolio.scss';
+import './services.scss';
 import { Grid, Row, Col, Image, ResponsiveEmbed} from 'react-bootstrap';
 
 
@@ -20,7 +20,9 @@ export default class Services extends  React.Component {
       </div>
       <Grid className="services">
 
-        <Row className="show-grid" >
+      <Row className="show-grid" >
+      <Col md={3}>
+      </Col>
         {services.map( ({href, src, alt, id},index) =>
           (
             <Col md={3} key={index} className="services_single">
@@ -29,7 +31,8 @@ export default class Services extends  React.Component {
             </a>
             </Col>
           ))}
-
+      <Col md={3}>
+      </Col>
         </Row>
       </Grid>
 </div>
@@ -41,8 +44,6 @@ export default class Services extends  React.Component {
 
 
 let services = [
-    {},
   {href: "#", src: "workImages/dutchdelight.jpg", alt: "mekongBaby", id: "mekongBaby"},
-  {href: "#", src: "workImages/jstea.jpg", alt: "mekongBaby", id: "mekongBaby"},
-    {}
+  {href: "#", src: "workImages/jstea.jpg", alt: "jstea", id: "jstea"}
   ]
