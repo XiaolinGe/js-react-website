@@ -11,7 +11,7 @@ import Contact from './contact';
 
 class Logo extends React.Component {
     render() {
-        return (<Image src="images/logo.png" className='logo' responsive />);
+        return (<Image src={'images/'+images.logo} className='logo' responsive />);
     }
 };
 
@@ -39,8 +39,6 @@ class Header extends React.Component {
             </Nav>
             </Navbar.Collapse>
             </Navbar>
-
-
             </div>);
     }
 };
@@ -57,40 +55,38 @@ class Footer extends React.Component {
         return (
             <Grid className="footer" >
 
-            <Row className="show-grid" id="footer_top">
+            <Row className="show-grid" className="footer_top">
             <Col  md={3} className="footer_logo">
             <a href="index_cn.html">
-            <Image src="images/logo.png" className='logo' responsive />
+            <Logo />
             </a>
             </Col>
             <Col  md={6} className="footer_span">
-            <div></div>
             </Col>
             <Col  md={3} className="footer_button">
             <a href="#"  style={{textDecoration: 'none',}}>
-            <span>Please contact us</span>
+            <span>{footerInfo.button}</span>
             </a>
             </Col>
             </Row>
 
-            <Row className="show-grid" id="footer_bottom">
+            <Row className="show-grid" className="footer_bottom">
             <Col  md={2} className="footer_wechat">
-            <Image src="images/weixin.jpg" alt="wechat" className='wechat' responsive />
+            <Image src={'images/'+images.wechat} alt="wechat" className='wechat' responsive />
             </Col>
             <Col  md={3} className="footer_info">
-            <p>Lynn</p>
+             <p>{footerInfo.name}</p>
             <span>
-            PO Box 36393,<br />
-            Northcote 0748,<br />
-            Auckland,<br />
-            New Zealand<br /><br />
+            {footerInfo.pobox}<br />
+            {footerInfo.district}<br />
+            {footerInfo.city}<br />
+            {footerInfo.country}<br /><br />
 
-            Phone:  <a href="tel:022023352">  &nbsp;021 202 3352</a><br />
-            Email: <a href="mailto:nzgezilin@gmail.com"> &nbsp;nzgezilin@gmail.com</a>
+            Phone:  <a href={'tel:'+footerInfo.phone}>  &nbsp;{footerInfo.phone}</a><br />
+            Email: <a href={'mailto:'+footerInfo.email}> &nbsp;{footerInfo.email}</a>
             </span>
             </Col>
             <Col  md={7} className="footer_menu">
-
             <ul>
             {footerMenu.map( ({link,display},index) =>
                 (
@@ -101,10 +97,9 @@ class Footer extends React.Component {
                 ) )}
 
             </ul>
-            <p className="copyright">Copyright © 2015 LYNN. All Rights Reserved.</p>
+            <p className="copyright">{footerInfo.copyright}</p>
             </Col>
             </Row>
-
 
             </Grid>
         );
@@ -129,6 +124,7 @@ export default class Layout extends React.Component {
             </div>);
     }
 };
+
 
 
 let menu = [
@@ -156,3 +152,20 @@ let footerMenu = [
     {link: "#", display: "contact"},
     {link: "#", display: "facebook"},
 ];
+
+let images = {
+    logo: "logo.png",
+    wechat: "weixin.jpg"
+};
+
+let footerInfo = {
+    name: "Lynn",
+    pobox: "PO Box 36393,",
+    district: "Northcote 0748,",
+    city: "Auckland,",
+    country: "New Zealand",
+    phone: "021 202 335",
+    email: "nzgezilin@gmail.com",
+    button: "Please contact us",
+    copyright: "Copyright © 2015 LYNN. All Rights Reserved."
+};

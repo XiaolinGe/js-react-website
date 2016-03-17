@@ -15,15 +15,12 @@ $ct: transparent;
     position: fixed;
     z-index: 100;
     background: rgba(28, 28, 28, .5);
-
     ul{
         margin-left: 160px;
         li {
         }
     }
 }
-
-
 
 .navbar-inverse .navbar-nav>li>a {
     font-size: 16px;
@@ -70,18 +67,15 @@ $ct: transparent;
     width: 100%;
     background-color: $cdagray;
 
-    #footer_top {
+    .footer_top {
         @include limit;
         border-bottom: dashed 1px #d0d0d0;
-
-
         .footer_logo {
             a {
                 width: 209px;
                 height: 84px;
                 margin: 0 auto;
                 display: block;
-
                 .logo {
                     width: 209px;
                     vertical-align: middle;
@@ -89,7 +83,6 @@ $ct: transparent;
                 }
             }
         }
-
         .footer_button {
             margin:20px auto;
             
@@ -103,7 +96,6 @@ $ct: transparent;
                 text-decoration: none;
                 margin: 0 auto;
                 vertical-align: middle;
-
                 span {
                     @include border_radius;
                     display: block;
@@ -122,55 +114,58 @@ $ct: transparent;
         }
 
     }
+    .footer_bottom {
+        @include limit;
+        margin-bottom: 0;
 
-}
-
-#footer_bottom {
-    @include limit;
-    margin-bottom: 0;
-
-    .footer_wechat {
-        margin: 0 auto;
-        margin-bottom: 40px;
-
-        .wechat {
-            width: 100px;
+        .footer_wechat {
             margin: 0 auto;
-            display: block;
-            vertical-align: middle;
-        }
-    }
-    .footer_info {
-        margin: 0 auto;
-        padding-bottom: 40px;
-        width: 190px;
+            margin-bottom: 40px;
 
-        p {
-            display: block;
-            font-size: 21px;
-            font-weight: 400;
-            color: $ctheme;
-            line-height: 100%;
-            margin-bottom: 6px;
-            font-family: $ff;
-        }
-        span {
-            display: block;
-            font-size: 12px;
-            font-weight: 400;
-            color: #c6c6c6;
-            line-height: 15px;
-            font-family: $ff;
-            float:left;
-
-            a {
-                color: #fff;
-                font-family: $ff;
+            .wechat {
+                width: 100px;
+                margin: 0 auto;
+                display: block;
+                vertical-align: middle;
             }
         }
+        .footer_info {
+            margin: 0 auto;
+            padding-bottom: 40px;
+            width: 190px;
+
+            p {
+                display: block;
+                font-size: 21px;
+                font-weight: 400;
+                color: $ctheme;
+                line-height: 100%;
+                margin-bottom: 6px;
+                font-family: $ff;
+            }
+            span {
+                display: block;
+                font-size: 12px;
+                font-weight: 400;
+                color: #c6c6c6;
+                line-height: 15px;
+                font-family: $ff;
+                float:left;
+
+                a {
+                    color: #fff;
+                    font-family: $ff;
+                   span {
+                     &:hover {color: $ctheme;}
+                   }
+                }
+            }
+        }
+        
     }
-    
 }
+
+
 
 .footer_menu {
     float: right;
