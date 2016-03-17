@@ -40,9 +40,7 @@ class Header extends React.Component {
             </Navbar.Collapse>
             </Navbar>
 
-            <div className="layout_banner">
 
-            </div>
             </div>);
     }
 };
@@ -97,7 +95,7 @@ class Footer extends React.Component {
             {footerMenu.map( ({link,display},index) =>
                 (
                     <li key={index}>
-                    <a href={link}  id={display}>
+                    <a href={link}  id={'footer_'+display}>
                     {display}</a>
                     </li>
                 ) )}

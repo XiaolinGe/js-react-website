@@ -14,6 +14,10 @@ class PortfolioRow extends  React.Component {
    let portfolio = this.props.portfolio;
     console.log(portfolio);
     return (
+      <div>
+      <div className="layout_banner">
+      <h1>portfolio</h1>
+      </div>
       <Grid className="portfolio_grid">
       {portfolio.map((e,index) => (
       <Row className="show-grid portfolio_row" key={index} >
@@ -29,7 +33,7 @@ class PortfolioRow extends  React.Component {
         </Row>
       ) ) }
       </Grid>
-
+</div>
     );
   }
 };

@@ -14,6 +14,10 @@ export default class Services extends  React.Component {
     let portfolio = this.props.portfolio;
     console.log(portfolio);
     return (
+      <div>
+      <div className="layout_banner">
+      <h1>services</h1>
+      </div>
       <Grid className="services">
 
         <Row className="show-grid" >
@@ -28,7 +32,7 @@ export default class Services extends  React.Component {
 
         </Row>
       </Grid>
-
+</div>
     );
   }
 };

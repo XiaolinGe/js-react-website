@@ -1,38 +1,21 @@
 @import './common.scss';
-$ctheme: #2ebdb6;
-
-$cgreen: #53aa46;
-$cblue: #0083c5;
-$cred: #e51751;
-$cliblue: #2ebdb6;
-
-$cligray: #575757;
-$cdagray: #3c3c3c;
-
-$ctext: #585858;
 
 
-.layout_banner {
-    width: 100%;
-    height: 0px;
-}
-
-#index_banner {
+.index_banner {
+    @include no_mp;
     width: 100%;
     height: 790px;
-    padding:0;
-    margin:0;
     background: url("../public/images/slide-01-bg.jpg") no-repeat top left;
     background-size: 110% 100%;
     .banner_images {
-    height: 600px;
-#trusted {
-    position: absolute;
-    top: 150px;
-    left: 0;
-}
+        height: 600px;
+        .trusted {
+            position: absolute;
+            top: 150px;
+            left: 0;
+        }
 
-}
+    }
 }
 
 
@@ -65,33 +48,20 @@ $ctext: #585858;
 }
 
 #professional_text {
-  color: #ffffff;
-  font-weight: 200;
-  font-family: 'Open Sans', sans-serif;
-  margin: 0 auto;
-  padding-top: 120px;
-  font-size: 23px;
-  text-align: center;
-  animation: fadeInUp 3s  2s 1;
-  -webkit-animation: fadeInUp 3s 2s 1;/*Safari and Chrome*/
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
+    color: #ffffff;
+    font-weight: 200;
+    font-family: $ff;
+    margin: 0 auto;
+    padding-top: 120px;
+    font-size: 23px;
+    text-align: center;
 }
 
 
-
-.fadeInUp {
-  animation: fadeInUp;
-  -webkit-animation: fadeInUp;/*Safari and Chrome*/
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  visibility: hidden;
-}
 
 
 .row{
-  padding: 0;
-  margin: 0;
+    @include no_mp;
 }
 
 
@@ -112,160 +82,153 @@ $ctext: #585858;
     background: $cliblue;
 }
 
+
+
+
 .index_button {
-    width: 237px;
-    display: block;
-    padding: 0 0 4px 0;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    text-decoration: none;
-    margin: 20px auto;
-
-    span {
-    display: block;
-    font-size: 13px;
-    font-weight: 400;
-    font-family: 'Open Sans', sans-serif;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 0 1px rgba(0,0,0,.25);
-    line-height: 17px;
-    height: 48px;
-    padding: 8px 0 0 0;
-    width: 237px;
-    background: $cligray;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    &:hover { background: $cdagray;}
-    }
-}
-
-
-#index_button {
     width: 75%;
     border-bottom: dashed 1px #d0d0d0;
     margin: 0 auto;
     padding: 0;
 }
 
-#index_work,
-#index_whyUs
-{
-    width: 75%;
-    border-bottom: dashed 1px #d0d0d0;
-    margin: 0 auto;
-    padding: 40px 0;
-    #work_intro,
-    #whyUs_intro
-{
-       height: 160px;
+    .single_button {
+        @include border_radius;
+        width: 237px;
+        display: block;
+        padding: 0 0 4px 0;
+        text-decoration: none;
+        margin: 20px auto;
 
-h2 {
-font-size: 21px;
-    font-weight: 400;
-    line-height: 100%;
-    margin: 0;
-    margin-bottom: 15px;
-    color: $ctext;
+        span {
+            @include border_radius;
+            display: block;
+            font-size: 13px;
+            font-weight: 400;
+            font-family: $ff;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 0 1px rgba(0,0,0,.25);
+            line-height: 17px;
+            height: 48px;
+            padding: 8px 0 0 0;
+            width: 237px;
+            background: $cligray;
+            &:hover { background: $cdagray;}
+        }
+    }
+
+.index_work,
+.index_whyUs
+ {
+     @include limit;
+     border-bottom: dashed 1px #d0d0d0;
+     margin: 0 auto;
+     .work_intro,
+     .whyUs_intro
+      {
+          height: 160px;
+
+          h2 {
+              font-size: 21px;
+              font-weight: 400;
+              line-height: 100%;
+              margin: 0;
+              margin-bottom: 15px;
+              color: $ctext;
+          }
+
+          p {
+              @include text_font;
+              display: block;
+              margin-bottom: 20px;
+          }
+          a{
+              display: block;
+              font-size: 14px;
+              font-weight: 600;
+              color: $ctheme;
+              float: left;
+              clear: both;
+              margin-top: 30px;
+          }
+      }
+
+ }
+
+
+.work_intro{
+    margin: 20px auto;
 }
 
-p {
-    display: block;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 140%;
-    margin-bottom: 20px;
-}
-a{
-display: block;
-    font-size: 14px;
-    font-weight: 600;
-    color: $ctheme;
-    float: left;
-    clear: both;
-    margin-top: 30px;
-}
-  }
-
-}
-
-
-#work_intro{
-margin: 20px auto;
-}
-
-#whyUs_intro {
-margin: 0 0 20px 0;
+.whyUs_intro {
+    margin: 0 0 20px 0;
 }
 
 
 
-#whyUs_image{
-width: 173px;
+.whyUs_image{
+    width: 173px;
     height: 133px;
     margin: 0 auto;
     margin-bottom: 20px;
 }
 
-#whyUs_explain {
-h4 {
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 100%;
-    margin: 0;
-    color: #0085c8;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}
-p {
-    line-height: 150%;
-    color: $ctext;
-}
+.whyUs_explain {
+    h4 {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 100%;
+        margin: 0;
+        color: $cblue;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+    p {
+        line-height: 150%;
+        color: $ctext;
+    }
 }
 
 
-#index_ourVideos {
+.index_ourVideos {
     width: 75%;
     margin: 20px auto;
     padding: 20px 0;
     padding-bottom: 0;
 
-#ourVideos_intro{
+    .ourVideos_intro{
 
-h2{
-font-size: 21px;
-    font-weight: 400;
-    line-height: 100%;
-    margin-bottom: 15px;
-    color: #585858;
+        h2{
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 100%;
+            margin-bottom: 15px;
+            color: $ctext;
+        }
+
+        p {
+            @include text_font
+            display: block;
+            margin-bottom: 20px;
+
+        }
     }
-
-p {
-display: block;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 140%;
-    margin-bottom: 20px;
-    color: $ctext;
-}
-}
 }
 
-#ourVideos_button {
-span {
-padding: 16px 0 0 0;
-}
+.ourVideos_button {
+    span {
+        padding: 16px 0 0 0;
+    }
 }
 
-#index_videos{
+.index_videos{
     width: 75%;
     margin: 20px auto;
     padding: 40px 0;
     .videos {
-    margin-bottom: 10px;
-}
-
+        margin-bottom: 10px;
     }
+
+}
