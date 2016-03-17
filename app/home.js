@@ -102,23 +102,14 @@ class Work extends React.Component {
       <Col  md={9} className="work_images">
       <Row className="show-grid">
 
-      <Col  md={4} >
-      <a href="#">
-      <Image src="workImages/mekongBaby.jpg" responsive alt="mekongBaby" id="mekongBaby" className="fadeInUp" />
-      </a>
-      </Col>
-
-      <Col  md={4} >
-      <a href="#">
-      <Image src="workImages/mekongBaby.jpg" responsive alt="mekongBaby" id="mekongBaby" className="fadeInUp" />
-      </a>
-      </Col>
-
-      <Col  md={4} >
-      <a href="#">
-      <Image src="workImages/mekongBaby.jpg" responsive alt="mekongBaby" id="mekongBaby" className="fadeInUp" />
-      </a>
-      </Col>
+      {work.map( ({href,src,alt,id},index) =>
+        (
+          <Col  md={4} >
+          <a href={href}>
+          <Image src={'workImages/'+src} responsive alt={alt} id={id} className="fadeInUp" />
+          </a>
+          </Col>
+        ))}
 
       </Row>
       </Col>
@@ -249,3 +240,11 @@ export default class Home extends React.Component {
     );
   }
 };
+
+
+
+let work = [
+  {href: "#", src: "mekongBaby.jpg", alt: "mekongBaby", id: "mekongBaby"},
+  {href: "#", src: "mekongBaby.jpg", alt: "mekongBaby", id: "mekongBaby"},
+  {href: "#", src: "mekongBaby.jpg", alt: "mekongBaby", id: "mekongBaby"}
+];
