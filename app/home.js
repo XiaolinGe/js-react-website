@@ -104,7 +104,7 @@ class Work extends React.Component {
 
       {work.map( ({href,src,alt,id},index) =>
         (
-          <Col  md={4} >
+          <Col  md={4} key={index}>
           <a href={href}>
           <Image src={'workImages/'+src} responsive alt={alt} id={id} className="fadeInUp" />
           </a>

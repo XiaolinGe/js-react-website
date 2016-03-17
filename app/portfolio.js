@@ -4,15 +4,11 @@ import { Grid, Row, Col, Image, ResponsiveEmbed} from 'react-bootstrap';
 
 
 
-class PortfolioRow extends  React.Component {
+export default class Portfolio extends  React.Component {
   constructor(props) {
     super(props);
-
   }
-
   render() {
-   let portfolio = this.props.portfolio;
-    console.log(portfolio);
     return (
       <div>
       <div className="layout_banner">
@@ -30,31 +26,14 @@ class PortfolioRow extends  React.Component {
             ) ) }
         </Row>
      </Grid>
-
 </div>
     );
   }
 };
 
 
-export default class Portfolio extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div >
-    <PortfolioRow  portfolio={portfolio} />
-      </div>
-    );
-  }
-};
 
-
-
-
-let portfolio =
-  [
+let portfolio =[
     {href: "#", src: "workImages/mekongBaby.jpg", alt: "mekongBaby", id: "mekongBaby"},
     {href: "#", src: "workImages/coffeeLab.jpg", alt: "coffeeLab", id: "coffeeLab"},
     {href: "#", src: "workImages/burgerfuel.jpg", alt: "burgerfuel", id: "burgerfuel"},

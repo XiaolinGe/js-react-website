@@ -117,8 +117,8 @@ export default class Layout extends React.Component {
         let navLanguage =Object.keys(language).length;
         return (
             <div>
-            <Header />
-            <Faq />
+          <Header />
+          <Home />
 
             <Footer />
             </div>);

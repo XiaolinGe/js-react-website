@@ -4,7 +4,7 @@ import { Grid, Row, Col, Image, ResponsiveEmbed, Input, ButtonInput,} from 'reac
 
 import Map from './map';
 
-export default class About extends React.Component {
+export default class Contact extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -34,8 +34,6 @@ export default class About extends React.Component {
       <Image src="images/trusted-photos-large.png" responsive alt="Google Business Photos Trusted Photographer" className="trusted"  />
       </Col>
 
-
-
       <Col  md={4} className="contact_form">
       <p>Fill Your Details</p>
       <form className="form-horizontal">
@@ -44,7 +42,6 @@ export default class About extends React.Component {
       <Input type="email"  placeholder="Enter Email" />
       <Input type="textarea"  placeholder="Enter Message" rows="7" cols="38" />
       <ButtonInput type="submit" value="Submit Button"  bsStyle="primary" />
-
       </form>
       </Col>
 
