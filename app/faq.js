@@ -2,7 +2,7 @@ import React from 'react';
 import './faq.scss';
 import { Grid, Row, Col, Image, ResponsiveEmbed} from 'react-bootstrap';
 
-export default class About extends React.Component {
+export default class Faq extends React.Component {
   constructor(props) {
     super(props);
   }
