@@ -1,8 +1,6 @@
 @import './common.scss';
 
 .services {
-    width: 75%;
-    margin: 20px auto;
-    padding: 40px 0;
+    @include limit;
     padding-bottom: 20px;
 }

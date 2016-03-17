@@ -11,25 +11,25 @@ class Banner extends React.Component {
 
   render() {
     return (
-      <Grid id="index_banner">
+      <Grid className="index_banner">
       <Row className="show-grid banner_images">
 
       <Col xs={3} md={2}>
-      <Image  src="images/trusted-photos-large.png" alt="trusted" id="trusted" responsive />
+      <Image  src="images/trusted-photos-large.png" alt="trusted" className="trusted" responsive />
       </Col>
 
       <Col xs={15} md={10}>
-      <Image src="images/macbook.png" responsive alt="macbook" id="macbook" className="fadeInUp" style={{animationDelay:'1s', animationDuration: '3s', zIndex: '1',}}/>
-      <Image src="images/ipad.png" responsive alt="ipad" id="ipad" className="fadeInUp" style={{animationDelay:'0.3s', animationDuration: '3s', zIndex: '2',}}/>
-      <Image src="images/iphone.png" responsive alt="iphone" id="iphone" className="fadeInUp" style={{animationDelay:'0.7s', animationDuration: '3s', zIndex: '3',}}/>
-      <Image src="images/popup.png" responsive alt="popup" id="popup" className="fadeInUp" style={{animationDelay:'1.3s', animationDuration: '3s', zIndex: '4',}}/>
+      <Image src="images/macbook.png" responsive alt="macbook" id="macbook" className="fadeInUp" style={{animationDelay:'0.3s', animationDuration: '2s', zIndex: '1',}}/>
+      <Image src="images/ipad.png" responsive alt="ipad" id="ipad" className="fadeInUp" style={{animationDelay:'0.6s', animationDuration: '2s', zIndex: '2',}}/>
+      <Image src="images/iphone.png" responsive alt="iphone" id="iphone" className="fadeInUp" style={{animationDelay:'0.9s', animationDuration: '2s', zIndex: '3',}}/>
+      <Image src="images/popup.png" responsive alt="popup" id="popup" className="fadeInUp" style={{animationDelay:'1.2s', animationDuration: '2s', zIndex: '4',}}/>
       </Col>
 
       </Row>
 
       <Row className="show-grid banner_text">
       <Col>
-      <p id="professional_text"  className="fadeInUp" style={{animationDelay:'1.3s', animationDuration: '3s', zIndex: '5',}}>
+      <p id="professional_text"  className="fadeInUp" style={{animationDelay:'1.3s', animationDuration: '2s', zIndex: '5',}}>
       Professional 360&#176; tours . Attract more customers with Google TM Business Photos!
       </p>
       </Col>
@@ -48,29 +48,29 @@ class Button extends React.Component {
 
   render() {
     return (
-      <Grid id="index_button">
+      <Grid className="index_button">
       <Row className="show-grid">
 
       <Col  md={3}>
-      <a href="#googleVideo" className="index_button" id="green_button" style={{textDecoration: 'none',}}>
+      <a href="#googleVideo" className="single_button" id="green_button" style={{textDecoration: 'none',}}>
       <span>What are Google Business Photos?</span>
       </a>
       </Col>
 
       <Col  md={3}>
-      <a href="#googleVideo" className="index_button" id="blue_button" style={{textDecoration: 'none',}}>
+      <a href="#googleVideo" className="single_button" id="blue_button" style={{textDecoration: 'none',}}>
       <span>Benefits of Google Business Photos?</span>
       </a>
       </Col>
 
       <Col  md={3}>
-      <a href="#googleVideo" className="index_button" id="red_button" style={{textDecoration: 'none',}}>
+      <a href="#googleVideo" className="single_button" id="red_button" style={{textDecoration: 'none',}}>
       <span>Take a Look at Our Portfolio</span>
       </a>
       </Col>
 
       <Col  md={3}>
-      <a href="#googleVideo" className="index_button" id="orange_button" style={{textDecoration: 'none',}}>
+      <a href="#googleVideo" className="single_button" id="orange_button" style={{textDecoration: 'none',}}>
       <span>Please contact us</span>
       </a>
       </Col>
@@ -89,17 +89,17 @@ class Work extends React.Component {
 
   render() {
     return (
-      <Grid id="index_work">
+      <Grid className="index_work">
       <Row className="show-grid">
 
-      <Col  md={3} id="work_intro">
+      <Col  md={3} className="work_intro">
       <h2>Our Work</h2>
       <p>Here’s a selection of our recent work, click the links to take a look.</p>
       <a  href="portfolio_en.html">View our portfolio »</a>
       </Col>
 
 
-      <Col  md={9} id="work_images">
+      <Col  md={9} className="work_images">
       <Row className="show-grid">
 
       <Col  md={4} >
@@ -137,21 +137,21 @@ class WhyUs extends React.Component {
 
   render() {
     return (
-      <Grid id="index_whyUs">
+      <Grid className="index_whyUs">
       <Row className="show-grid">
 
-      <Col  md={3} id="whyUs_intro">
+      <Col  md={3} className="whyUs_intro">
       <h2>Why Us?</h2>
       <p>We’ve been recognised by Google™ as a trusted photographer, so you can be sure we’re qualified to provide
       a quality service.</p>
       <a href="about_en.html">Read more about Jibble »</a>
       </Col>
 
-      <Col  md={2}  id="whyUs_image">
+      <Col  md={2}  className="whyUs_image">
       <Image src="images/trusted-photos-large.png" responsive alt="trusted" id="trusted"  />
       </Col>
 
-      <Col  md={7}  id="whyUs_explain">
+      <Col  md={7}  className="whyUs_explain">
       <h4>Google Trusted Photographer</h4>
       <p>Jibble 360 is a “Google Trusted Photographer” based in Auckland, New Zealand. We take pride in exceeding all expectations and deliver results that continue to surprise.</p>
 
@@ -173,16 +173,16 @@ class OurVideos extends React.Component {
 
   render() {
     return (
-      <Grid id="index_ourVideos">
+      <Grid className="index_ourVideos">
       <Row className="show-grid">
 
-      <Col  md={9} id="ourVideos_intro">
+      <Col  md={9} className="ourVideos_intro">
       <h2 id="googleVideo">Our Videos</h2>
       <p>If you’re having trouble understanding what we do, take a look at the videos from Google™ below.</p>
       </Col>
 
-      <Col  md={3}  id="ourVideos_button">
-      <a href="portfolio_en.html" className="index_button" id="red_button" style={{textDecoration: 'none',}}>
+      <Col  md={3}  className="ourVideos_button">
+      <a href="portfolio_en.html" className="single_button" id="red_button" style={{textDecoration: 'none',}}>
       <span>View Our Portfolio</span>
       </a>
       </Col>
@@ -204,7 +204,7 @@ class Videos extends React.Component {
 
   render() {
     return (
-      <Grid id="index_videos">
+      <Grid className="index_videos">
       <Row className="show-grid">
 
       <Col  md={6} id="videos_1" className="videos">

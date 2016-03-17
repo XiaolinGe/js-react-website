@@ -11,6 +11,10 @@ export default class About extends React.Component {
 
   render() {
     return (
+      <div>
+      <div className="layout_banner">
+      <h1>contact</h1>
+      </div>
       <Grid className="contact">
       <Row className="show-grid">
 
@@ -51,6 +55,7 @@ export default class About extends React.Component {
 
       </Row>
       </Grid>
+      </div>
     );
   }
 };

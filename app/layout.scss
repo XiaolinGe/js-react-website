@@ -14,8 +14,7 @@ $ct: transparent;
     padding: 0;
     position: fixed;
     z-index: 100;
-    @if $debug {@include debug-border;}
-    @if $debug { background: rgba(28, 28, 28, .5)};
+    background: rgba(28, 28, 28, .5);
 
     ul{
         margin-left: 160px;
@@ -30,10 +29,10 @@ $ct: transparent;
     font-size: 16px;
     font-weight: 300;
     color: $c;
-    font-family: 'Roboto', sans-serif;
+    font-family: $ff;
     font-style: normal;
-    &:hover { color: $c1; }
-    &:active { color: $c1; }
+    &:hover { color: $ctheme; }
+    &:active { color: $ctheme; }
 }
 
 .logo {
@@ -59,39 +58,22 @@ $ct: transparent;
     li {
         a {
             &:hover {background-color: $ct;
-                     color: $c1;
+                     color: $ctheme;
                     }
         }
     }
 }
 
 
-.layout_banner {
-    width: 100%;
-    height: 280px;
-    background: url("../public/images/slide-01-bg.jpg") no-repeat top left;
-
-    h1 {
-        font-size: 700%;
-        font-weight: 800;
-        color: #fff;
-        text-transform: uppercase;
-        text-align: center;
-        line-height: 205px;
-        letter-spacing: -1px;
-        padding: 55px 0 0 0;
-    }
-}
 
 .footer {
     width: 100%;
-    background-color: #3c3c3c;
+    background-color: $cdagray;
 
     #footer_top {
-        width: 75%;
+        @include limit;
         border-bottom: dashed 1px #d0d0d0;
-        margin: 20px auto;
-        padding: 40px 0;
+
 
         .footer_logo {
             a {
@@ -112,19 +94,18 @@ $ct: transparent;
             margin:20px auto;
             
             a {
+                @include border_radius;
                 width: 210px;
                 height: 40px;
                 display: block;
                 background: #23827d;
                 padding: 0 0 4px 0;
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                border-radius: 3px;
                 text-decoration: none;
                 margin: 0 auto;
                 vertical-align: middle;
 
                 span {
+                    @include border_radius;
                     display: block;
                     font-size: 13px;
                     font-weight: 700;
@@ -134,10 +115,7 @@ $ct: transparent;
                     text-shadow: 0 1px rgba(0,0,0,.25);
                     line-height: 36px;
                     width: 210px;
-                    background: #2ebdb6;
-                    -webkit-border-radius: 3px;
-                    -moz-border-radius: 3px;
-                    border-radius: 3px;
+                    background: $ctheme;
                     &:hover {  background: #21a69f;}
                 }
             }
@@ -148,9 +126,7 @@ $ct: transparent;
 }
 
 #footer_bottom {
-    width: 75%;
-    margin: 20px auto;
-    padding: 40px 0;
+    @include limit;
     margin-bottom: 0;
 
     .footer_wechat {
@@ -173,10 +149,10 @@ $ct: transparent;
             display: block;
             font-size: 21px;
             font-weight: 400;
-            color: #2ebdb6;
+            color: $ctheme;
             line-height: 100%;
             margin-bottom: 6px;
-            font-family: 'Open Sans', sans-serif;
+            font-family: $ff;
         }
         span {
             display: block;
@@ -184,12 +160,12 @@ $ct: transparent;
             font-weight: 400;
             color: #c6c6c6;
             line-height: 15px;
-            font-family: 'Open Sans', sans-serif;
+            font-family: $ff;
             float:left;
 
             a {
                 color: #fff;
-                font-family: 'Open Sans', sans-serif;
+                font-family: $ff;
             }
         }
     }
@@ -232,11 +208,11 @@ $ct: transparent;
     
 }
 
-#contact {
+#footer_contact {
     color: $ctheme;
 }
 
 
-#facebook {
+#footer_facebook {
     color: $cblue;
 }

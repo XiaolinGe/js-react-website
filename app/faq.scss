@@ -2,13 +2,10 @@
 
 
 .faq {
-    width: 75%;
-    margin: 20px auto;
-    padding: 40px 0;
+    @include limit;
 
     .faq_image {
-        margin: 0;
-        padding: 0;
+        @include no_mp;
         margin-bottom: 20px;
         h2 {
             margin: 0;
@@ -19,17 +16,14 @@
             color: $ctext;
         }
         p {
+            @include text_font;
             display: block;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 140%;
             margin-bottom: 20px;
-            color: $ctext;
+
         }
         .trusted {
+            @include no_mp;
             display: block;
-            margin: 0;
-            padding: 0;
             border: 0;
         }
     }
@@ -38,24 +32,15 @@
         h3 {
             font-size: 21px;
             font-weight: 700;
-            color: #2ebdb6;
+            color: $ctheme;
             line-height: 100%;
             padding: 15px 0;
         }
         p {
+            @include text_font;
             line-height: 150%;
             margin-bottom: 15px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 12px;
-            font-weight: 400;
-            color: $ctext;
 
         }
     }
-}
-
-
-.layout_banner {
-    width: 100%;
-    height: 280px;
 }

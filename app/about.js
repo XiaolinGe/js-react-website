@@ -9,6 +9,10 @@ export default class About extends React.Component {
 
   render() {
     return (
+      <div>
+      <div className="layout_banner">
+      <h1>about</h1>
+      </div>
       <Grid className="about">
       <Row className="show-grid">
 
@@ -33,6 +37,7 @@ export default class About extends React.Component {
 
       </Row>
       </Grid>
+      </div>
     );
   }
 };
