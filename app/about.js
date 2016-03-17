@@ -19,7 +19,6 @@ export default class About extends React.Component {
       <Col  md={3} className="about_image">
       <h2>About</h2>
       <p>Find out more about Jibble 360, the Google™ Trusted Photographer.</p>
-      <a href="#">Terms and Conditions</a>
       <Image src="images/trusted-photos-large.png" responsive alt="trusted" className="trusted"  />
       </Col>
 

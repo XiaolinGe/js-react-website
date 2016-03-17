@@ -4,7 +4,7 @@ import { Grid, Row, Col, Image, ResponsiveEmbed, Input, ButtonInput,} from 'reac
 
 import Map from './map';
 
-export default class About extends React.Component {
+export default class Contact extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -19,23 +19,20 @@ export default class About extends React.Component {
       <Row className="show-grid">
 
       <Col  md={3} className="contact_info">
-      <Image src="images/logo.png" responsive alt="logo" className="contact_logo"  />
-<br />
+      <Image src={'images/'+images.logo} responsive alt="logo" className="contact_logo"  />
+      <br />
       <p>
-      PO Box 36393,<br />
-      Northcote 0748,<br />
-      Auckland,<br />
-      New Zealand<br /><br />
+      {Info.pobox}<br />
+      {Info.district}<br />
+      {Info.city}<br />
+      {Info.country}<br /><br />
 
-      Phone:  <a href="tel:022023352">  &nbsp;021 202 3352</a><br />
-      Email: <a href="mailto:nzgezilin@gmail.com"> &nbsp;nzgezilin@gmail.com</a>
+      Phone:  <a href={'tel:'+Info.phone}>  &nbsp;{Info.phone}</a><br />
+      Email: <a href={'mailto:'+Info.email}> &nbsp;{Info.email}</a>
       </p>
       <a className="facebook" href="https://www.facebook.com/jibblenz" target="_blank">Facebook</a><br />
-      <a href="#">Terms and Conditions</a>
       <Image src="images/trusted-photos-large.png" responsive alt="Google Business Photos Trusted Photographer" className="trusted"  />
       </Col>
-
-
 
       <Col  md={4} className="contact_form">
       <p>Fill Your Details</p>
@@ -45,7 +42,6 @@ export default class About extends React.Component {
       <Input type="email"  placeholder="Enter Email" />
       <Input type="textarea"  placeholder="Enter Message" rows="7" cols="38" />
       <ButtonInput type="submit" value="Submit Button"  bsStyle="primary" />
-
       </form>
       </Col>
 
@@ -58,4 +54,21 @@ export default class About extends React.Component {
       </div>
     );
   }
+};
+
+
+let images = {
+  logo: "logo.png",
+  wechat: "weixin.jpg"
+};
+
+let Info = {
+  name: "Lynn",
+  pobox: "PO Box 36393,",
+  district: "Northcote 0748,",
+  city: "Auckland,",
+  country: "New Zealand",
+  phone: "021 202 335",
+  email: "nzgezilin@gmail.com",
+  copyright: "Copyright © 2015 LYNN. All Rights Reserved."
 };

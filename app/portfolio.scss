@@ -1,9 +1,12 @@
 @import './common.scss';
 
-.portfolio_grid {
-    @include limit;
+.portfolio {
+ @include limit;
     padding-bottom: 20px;
     .portfolio_row {
         margin-bottom: 20px;
+        .portfolio_single {
+            margin:15px 0;
+        }
     }
 }

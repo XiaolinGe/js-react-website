@@ -29,7 +29,9 @@
     }
     .faq_intro {
         @include left_dashed;
-        h3 {
+        div {
+    margin: -35px 0 50px 0;
+             h3 {
             font-size: 21px;
             font-weight: 700;
             color: $ctheme;
@@ -42,5 +44,7 @@
             margin-bottom: 15px;
 
         }
+        }
+
     }
 }
