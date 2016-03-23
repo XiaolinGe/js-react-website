@@ -58,13 +58,15 @@ class Footer extends React.Component {
 
   render() {
     let {info,footerMenu} = this.props;
+    let {logo,wechat} = info;
+    
         return (
             <Grid className="footer" >
 
             <Row className="show-grid" className="footer_top">
             <Col  md={3} className="footer_logo">
             <a href="index_cn.html">
-            <Logo />
+            <Logo logo={logo}/>
             </a>
             </Col>
             <Col  md={6} className="footer_span">
@@ -78,7 +80,7 @@ class Footer extends React.Component {
 
             <Row className="show-grid" className="footer_bottom">
             <Col  md={2} className="footer_wechat">
-          <Image src={'images/'+info.wechat} alt="wechat" className='wechat' responsive />
+          <Image src={'images/'+wechat} alt="wechat" className='wechat' responsive />
           </Col>
           <Col  md={3} className="footer_info">
           <p>{info.name}</p>

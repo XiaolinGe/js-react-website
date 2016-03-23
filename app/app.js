@@ -16,10 +16,11 @@ let history = createHashHistory();
 
 
 export default class App extends React.Component {
-  constructor() {
+    constructor() {
     super();
   }
-  componentWilllMount() {
+    componentDidMount() {
+       
     const {dispatch} = this.props;
     //dispatch 可以触发一个 action,action是一个普通的map
     // 也可以触发一个action,action是一个function.function 第一个参数是dispatch,第二个参数是state,常用来做异步数据获取。
@@ -36,7 +37,7 @@ export default class App extends React.Component {
 };
 
 function mapStateToProps(state) {
-    return {};
+    return state;
 }
 
 export default connect(mapStateToProps)(App);
