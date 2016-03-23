@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import "./layout.scss";
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Grid, Row, Col, Image, ResponsiveEmbed, } from 'react-bootstrap';
 
@@ -10,21 +11,25 @@ import Faq from './faq';
 import Contact from './contact';
 
 class Logo extends React.Component {
-    render() {
-        return (<Image src={'images/'+images.logo} className='logo' responsive />);
+  render() {
+    let {logo} = this.props;
+        return (<Image src={'images/'+logo} className='logo' responsive />);
     }
 };
 
 
 class Header extends React.Component {
-    render() {
-        let navLanguage =Object.keys(language).length;
+  render() {
+    let {info,language,menu} = this.props;
+    let {logo} = info;
+     let navLanguage =Object.keys(language).length;
+
         return (
             <div>
             <Navbar inverse className='header_nav'>
             <Navbar.Header>
             <Navbar.Brand>
-            <Logo />
+            <Logo logo={logo}/>
             </Navbar.Brand>
             <Navbar.Toggle />
             </Navbar.Header>
@@ -51,14 +56,17 @@ class Footer extends React.Component {
         super(props);
     }
 
-    render() {
+  render() {
+    let {info,footerMenu} = this.props;
+    let {logo,wechat} = info;
+    
         return (
             <Grid className="footer" >
 
             <Row className="show-grid" className="footer_top">
             <Col  md={3} className="footer_logo">
             <a href="index_cn.html">
-            <Logo />
+            <Logo logo={logo}/>
             </a>
             </Col>
             <Col  md={6} className="footer_span">
@@ -72,18 +80,18 @@ class Footer extends React.Component {
 
             <Row className="show-grid" className="footer_bottom">
             <Col  md={2} className="footer_wechat">
-            <Image src={'images/'+images.wechat} alt="wechat" className='wechat' responsive />
-            </Col>
-            <Col  md={3} className="footer_info">
-          <p>{Info.name}</p>
+          <Image src={'images/'+wechat} alt="wechat" className='wechat' responsive />
+          </Col>
+          <Col  md={3} className="footer_info">
+          <p>{info.name}</p>
           <span>
-          {Info.pobox}<br />
-          {Info.district}<br />
-          {Info.city}<br />
-          {Info.country}<br /><br />
+          {info.pobox}<br />
+          {info.district}<br />
+          {info.city}<br />
+          {info.country}<br /><br />
 
-          Phone:  <a href={'tel:'+Info.phone}>  &nbsp;{Info.phone}</a><br />
-          Email: <a href={'mailto:'+Info.email}> &nbsp;{Info.email}</a>
+          Phone:  <a href={'tel:'+info.phone}>  &nbsp;{info.phone}</a><br />
+          Email: <a href={'mailto:'+info.email}> &nbsp;{info.email}</a>
             </span>
             </Col>
             <Col  md={7} className="footer_menu">
@@ -97,7 +105,7 @@ class Footer extends React.Component {
                 ) )}
 
             </ul>
-            <p className="copyright">{Info.copyright}</p>
+          <p className="copyright">{info.copyright}</p>
             </Col>
             </Row>
 
@@ -112,59 +120,31 @@ class Footer extends React.Component {
 
 
 export default class Layout extends React.Component {
-    render() {
-        let {menus} = this.props;
-        let navLanguage =Object.keys(language).length;
+  render() {
+    let {menu,language,info,footerMenu} = this.props;
         return (
-            <div>
-          <Header />
+          <div>
+          <Header menu={menu} language={language} info={info}/>
           <Home />
 
-            <Footer />
-            </div>);
+          <Footer info={info} footerMenu={footerMenu} />
+          </div>);
     }
 };
 
 
 
-let menu = [
-    {link: "#", display: "HOME"},
-    {link: "#", display: "ABOUT"},
-    {link: "#", display: "PORTFOLIO"},
-    {link: "#", display: "SERVICES"},
-    {link: "#", display: "FAQ"},
-    {link: "#", display: "CONTACT"}
-];
+function mapStateToProps(state) {
+    console.log(state);
+    let {info,menu,language,footerMenu,portfolio,services,faq,work} = state.info;
 
+    let layout = {
+        info: info,
+        menu: menu,
+        language: language,
+        footerMenu: footerMenu
+    };
+    return layout;
+}
 
-let language = [
-    {language: "English"},
-    {language: "Chinese"},
-    {language: "Japnese"}
-];
-
-let footerMenu = [
-    {link: "#", display: "home"},
-    {link: "#", display: "about"},
-    {link: "#", display: "portfolio"},
-    {link: "#", display: "services"},
-    {link: "#", display: "faq"},
-    {link: "#", display: "contact"},
-    {link: "#", display: "facebook"},
-];
-
-let images = {
-    logo: "logo.png",
-    wechat: "weixin.jpg"
-};
-
-let Info = {
-    name: "Lynn",
-    pobox: "PO Box 36393,",
-    district: "Northcote 0748,",
-    city: "Auckland,",
-    country: "New Zealand",
-    phone: "021 202 335",
-    email: "nzgezilin@gmail.com",
-    copyright: "Copyright © 2015 LYNN. All Rights Reserved."
-};
+export default connect(mapStateToProps)(Layout);

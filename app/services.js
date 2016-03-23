@@ -46,4 +46,4 @@ export default class Services extends  React.Component {
 let services = [
   {href: "#", src: "workImages/dutchdelight.jpg", alt: "mekongBaby", id: "mekongBaby"},
   {href: "#", src: "workImages/jstea.jpg", alt: "jstea", id: "jstea"}
-  ]
+  ];
