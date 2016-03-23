@@ -47,4 +47,4 @@ let portfolio =[
     {href: "#", src: "workimages/vmaxcafe.jpg", alt: "vmaxcafe", id: "vmaxcafe"},
     {href: "#", src: "workimages/vmaxcafe.jpg", alt: "vmaxcafe", id: "vmaxcafe"},
     {href: "#", src: "workimages/glapogenuine.jpg", alt: "glapogenuine", id: "glapogenuine"}
-  ]
+  ];
