@@ -99,11 +99,9 @@ class Footer extends React.Component {
             <ul>
             {footerMenu.map( ({link,display},index) =>
                 (
-                    <li key={index}>
-                  
-                  <IndexLink to={link}  id={'footer_'+display}>{display}</IndexLink>
-                    
-                    </li>
+                  <li key={index}>                 
+                  <Link to={link}  id={'footer_'+display}>{display}</Link>
+                  </li>
                 ) )}
 
             </ul>

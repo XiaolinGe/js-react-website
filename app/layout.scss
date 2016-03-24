@@ -62,6 +62,11 @@ $ct: transparent;
 }
 
 
+.navbar-nav {
+    li a:first-child {
+        position:absolute;
+    }
+}
 
 .footer {
     width: 100%;
