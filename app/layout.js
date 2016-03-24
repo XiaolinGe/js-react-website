@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link,IndexLink } from "react-router";
 import "./layout.scss";
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Grid, Row, Col, Image, ResponsiveEmbed, } from 'react-bootstrap';
 
@@ -35,7 +36,7 @@ class Header extends React.Component {
             </Navbar.Header>
             <Navbar.Collapse>
             <Nav>
-            {menu.map( ({link,display},index) => (<NavItem key={index}  eventKey={index} href={link}>{display}</NavItem>) )}
+          {menu.map( ({link,display},index) => (<NavItem key={index}  eventKey={index} ><Link  key={index} to={link}>{display}</Link></NavItem>) )}
             </Nav>
             <Nav pullRight>
             <NavDropdown eventKey={navLanguage} title="Language" id="basic-nav-dropdown">
@@ -98,10 +99,9 @@ class Footer extends React.Component {
             <ul>
             {footerMenu.map( ({link,display},index) =>
                 (
-                    <li key={index}>
-                    <a href={link}  id={'footer_'+display}>
-                    {display}</a>
-                    </li>
+                  <li key={index}>                 
+                  <Link to={link}  id={'footer_'+display}>{display}</Link>
+                  </li>
                 ) )}
 
             </ul>
@@ -125,8 +125,7 @@ export default class Layout extends React.Component {
         return (
           <div>
           <Header menu={menu} language={language} info={info}/>
-          <Home />
-
+          {this.props.children}
           <Footer info={info} footerMenu={footerMenu} />
           </div>);
     }

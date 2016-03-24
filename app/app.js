@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Router, Route, IndexRoute } from 'react-router'
+import { hashHistory } from 'react-router';
 import createHashHistory from 'history/lib/createHashHistory';
 import { getInfo } from './actions/actions';
 
@@ -14,6 +16,12 @@ import Contact from './contact';
 
 let history = createHashHistory();
 
+
+class NoMatch extends React.Component {
+  render() {
+    return(<div>Not Found</div>);
+  }
+}
 
 export default class App extends React.Component {
     constructor() {
@@ -31,7 +39,18 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Layout />
+      <Router history={history}>
+      <Route path='/' component={Layout}>
+      <IndexRoute component={Home} />
+      <Route path='home' component={Home} />
+      <Route path='about' component={About} />
+      <Route path='portfolio' component={Portfolio} />
+      <Route path='services' component={Services} />
+      <Route path='faq' component={Faq} />
+      <Route path='contact' component={Contact} />
+      </Route>
+      <Route path='*' component={NoMatch} />  
+      </Router>
     );
   }
 };

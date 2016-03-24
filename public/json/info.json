@@ -12,12 +12,12 @@
         "wechat": "weixin.jpg"
     },
     "menu": [
-        {"link": "#", "display": "HOME"},
-        {"link": "#", "display": "ABOUT"},
-        {"link": "#", "display": "PORTFOLIO"},
-        {"link": "#", "display": "SERVICES"},
-        {"link": "#", "display": "FAQ"},
-        {"link": "#", "display": "CONTACT"}
+        {"link": "/home", "display": "HOME"},
+        {"link": "/about", "display": "ABOUT"},
+        {"link": "/portfolio", "display": "PORTFOLIO"},
+        {"link": "/services", "display": "SERVICES"},
+        {"link": "/faq", "display": "FAQ"},
+        {"link": "/contact", "display": "CONTACT"}
     ],
 
     "language": [
@@ -27,12 +27,12 @@
     ],
 
     "footerMenu": [
-        {"link": "#", "display": "home"},
-        {"link": "#", "display": "about"},
-        {"link": "#", "display": "portfolio"},
-        {"link": "#", "display": "services"},
-        {"link": "#", "display": "faq"},
-        {"link": "#", "display": "contact"},
+        {"link": "/home", "display": "home"},
+        {"link": "/about", "display": "about"},
+        {"link": "/portfolio", "display": "portfolio"},
+        {"link": "/services", "display": "services"},
+        {"link": "/faq", "display": "faq"},
+        {"link": "/contact", "display": "contact"},
         {"link": "#", "display": "facebook"}
     ],
 
