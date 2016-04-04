@@ -1,0 +1,44 @@
+* website_generator
+website generator
+
+* APIs
+
+** /api/data
+
+| description | Get all the information of the entire website |
+|-------------+-----------------------------------------------|
+| URL path    | /api/data                                     |
+|-------------+-----------------------------------------------|
+| URL method  | GET                                           |
+|-------------+-----------------------------------------------|
+
+ data structure
+
+
+#+BEGIN_SRC json
+{
+    "infos": {
+        "name": "1",
+        "pobox": "1",
+        "district": "1",
+        "city": "1,",
+        "country": "1",
+        "phone": "1",
+        "email": "1",
+        "logo": "1",
+        "wechat": "1"
+    },
+    "menus": [{"url": "1", "display": "1"} ...],
+    "languages": [{"language": "1"} ...],
+    "footerMenus": [{"url": "1", "display": "1"} ...],
+    "portfolios": [{"url": "1", "image": "1", "title": "1} ...],
+    "services": [{"url": "1", "image": "1", "title": "1"} ...],
+    "faqs": [{"question": "1", "answer": "1"} ...]
+}
+
+#+END_SRC  
+
+
+   
+
+http://localhost:3000/api/data GET

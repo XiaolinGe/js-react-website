@@ -9,7 +9,7 @@ export default class Faq extends React.Component {
   }
 
   render() {
-    let {faq} = this.props;
+    let {faqs} = this.props;
     return (
       <div>
       <div className="layout_banner">
@@ -26,7 +26,7 @@ export default class Faq extends React.Component {
 
       <Col  md={9} className="faq_intro">
 
-      {faq.map( ({question,answer},index) =>
+      {faqs.map( ({question,answer},index) =>
         (
           <div key={index} >
           <h3>{question}</h3>
@@ -44,10 +44,9 @@ export default class Faq extends React.Component {
 };
 
 function mapStateToProps(state) {
-  console.log(state);
-  let {faq} = state.info;
+  let {faqs} = state.info;
 
-  return {faq};
+  return {faqs};
 }
 
 export default connect(mapStateToProps)(Faq);

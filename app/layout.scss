@@ -30,6 +30,7 @@ $ct: transparent;
     color: $c;
     font-family: $ff;
     font-style: normal;
+    text-transform: uppercase;
     &:hover { color: $ctheme; }
     &:active { color: $ctheme; }
 
@@ -58,6 +59,7 @@ $ct: transparent;
     background-color: $ct;
     li {
         a {
+            text-transform: capitalize;
             &:hover {background-color: $ct;
                      color: $ctheme;
                     }
@@ -164,9 +166,9 @@ $ct: transparent;
                 a {
                     color: #fff;
                     font-family: $ff;
-                   span {
-                     &:hover {color: $ctheme;}
-                   }
+                    span {
+                        &:hover {color: $ctheme;}
+                    }
                 }
             }
         }

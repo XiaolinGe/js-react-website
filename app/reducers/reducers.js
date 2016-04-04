@@ -2,14 +2,13 @@ import { combineReducers } from 'redux';
 import { RECEIVE_INFO, FETCH_INFO } from '../actions/actions';
 
 const initialState = {
-  info: {},
-  menu: [],
-  language: [],
-  footerMenu: [],
-  portfolio: [],
+  infos: {},
+  menus: [],
+  languages: [],
+  footerMenus: [],
+  portfolios: [],
   services: [],
-  faq: [],
-  work: []
+  faqs: []
 };
 
 function info(state = initialState, action) {
