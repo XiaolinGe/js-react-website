@@ -59,6 +59,7 @@ $ct: transparent;
     background-color: $ct;
     li {
         a {
+            text-transform: capitalize;
             &:hover {background-color: $ct;
                      color: $ctheme;
                     }
