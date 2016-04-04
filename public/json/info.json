@@ -11,12 +11,12 @@
         "wechat": "/images/weixin.jpg"
     },
     "menu": [
-        {"link": "/home", "display": "HOME"},
-        {"link": "/about", "display": "ABOUT"},
-        {"link": "/portfolio", "display": "PORTFOLIO"},
-        {"link": "/services", "display": "SERVICES"},
-        {"link": "/faq", "display": "FAQ"},
-        {"link": "/contact", "display": "CONTACT"}
+        {"link": "/home", "display": "home"},
+        {"link": "/about", "display": "about"},
+        {"link": "/portfolio", "display": "portfolio"},
+        {"link": "/services", "display": "services"},
+        {"link": "/faq", "display": "faq"},
+        {"link": "/contact", "display": "contact"}
     ],
 
     "language": [
