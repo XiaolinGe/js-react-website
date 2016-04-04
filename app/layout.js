@@ -14,7 +14,7 @@ import Contact from './contact';
 class Logo extends React.Component {
   render() {
     let {logo} = this.props;
-    return (<Image src={'images/'+logo} className='logo' responsive />);
+    return (<Image src={logo} className='logo' responsive />);
   }
 };
 
@@ -94,7 +94,7 @@ class Footer extends React.Component {
 
       <Row className="show-grid" className="footer_bottom">
       <Col  md={2} className="footer_wechat">
-      <Image src={'images/'+wechat} alt="wechat" className='wechat' responsive />
+      <Image src={wechat} alt="wechat" className='wechat' responsive />
       </Col>
       <Col  md={3} className="footer_info">
       <p>{info.name}</p>

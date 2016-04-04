@@ -7,8 +7,8 @@
         "country": "New Zealand",
         "phone": "021 202 335",
         "email": "nzgezilin@gmail.com",
-        "logo": "logo.png",
-        "wechat": "weixin.jpg"
+        "logo": "/images/logo.png",
+        "wechat": "/images/weixin.jpg"
     },
     "menu": [
         {"link": "/home", "display": "HOME"},

@@ -21,7 +21,7 @@ export default class Contact extends React.Component {
       <Row className="show-grid">
 
       <Col  md={3} className="contact_info">
-      <Image src={'images/'+info.logo} responsive alt="logo" className="contact_logo"  />
+      <Image src={info.logo} responsive alt="logo" className="contact_logo"  />
       <br />
       <p>
       {info.pobox}<br />
