@@ -87,12 +87,5 @@
         {"question": "What will I pay?",
          "answer": "The cost comes down to size, amount of sites and the length of time that the project takes."
         }
-    ],
-
-    "work": [
-        {"href": "#", "src": "mekongBaby.jpg", "alt": "mekongBaby", "id": "mekongBaby"},
-        {"href": "#", "src": "mekongBaby.jpg", "alt": "mekongBaby", "id": "mekongBaby"},
-        {"href": "#", "src": "mekongBaby.jpg", "alt": "mekongBaby", "id": "mekongBaby"}
     ]
-
 }
