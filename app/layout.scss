@@ -2,7 +2,9 @@
 $c: #c6c6c5;
 $c1: #2ebdb6;
 $ct: transparent;
-
+.active {
+    color: $ctheme !important; 
+}
 
 .container {
     margin-top: 13px;
@@ -30,6 +32,8 @@ $ct: transparent;
     font-style: normal;
     &:hover { color: $ctheme; }
     &:active { color: $ctheme; }
+
+
 }
 
 .logo {
@@ -62,7 +66,7 @@ $ct: transparent;
 }
 
 
-.navbar-nav {
+.navbar-nav:first-child {
     li a:first-child {
         position:absolute;
     }
@@ -216,3 +220,5 @@ $ct: transparent;
 #footer_facebook {
     color: $cblue;
 }
+
+
