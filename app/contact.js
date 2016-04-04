@@ -1,5 +1,6 @@
 import React from 'react';
 import './contact.scss';
+import { connect } from 'react-redux';
 import { Grid, Row, Col, Image, ResponsiveEmbed, Input, ButtonInput,} from 'react-bootstrap';
 
 import Map from './map';
@@ -10,6 +11,7 @@ export default class Contact extends React.Component {
   }
 
   render() {
+    let {info} = this.props;
     return (
       <div>
       <div className="layout_banner">
@@ -19,16 +21,16 @@ export default class Contact extends React.Component {
       <Row className="show-grid">
 
       <Col  md={3} className="contact_info">
-      <Image src={'images/'+images.logo} responsive alt="logo" className="contact_logo"  />
+      <Image src={'images/'+info.logo} responsive alt="logo" className="contact_logo"  />
       <br />
       <p>
-      {Info.pobox}<br />
-      {Info.district}<br />
-      {Info.city}<br />
-      {Info.country}<br /><br />
+      {info.pobox}<br />
+      {info.district}<br />
+      {info.city}<br />
+      {info.country}<br /><br />
 
-      Phone:  <a href={'tel:'+Info.phone}>  &nbsp;{Info.phone}</a><br />
-      Email: <a href={'mailto:'+Info.email}> &nbsp;{Info.email}</a>
+      Phone:  <a href={'tel:'+info.phone}>  &nbsp;{info.phone}</a><br />
+      Email: <a href={'mailto:'+info.email}> &nbsp;{info.email}</a>
       </p>
       <a className="facebook" href="https://www.facebook.com/jibblenz" target="_blank">Facebook</a><br />
       <Image src="images/trusted-photos-large.png" responsive alt="Google Business Photos Trusted Photographer" className="trusted"  />
@@ -57,18 +59,12 @@ export default class Contact extends React.Component {
 };
 
 
-let images = {
-  logo: "logo.png",
-  wechat: "weixin.jpg"
-};
 
-let Info = {
-  name: "Lynn",
-  pobox: "PO Box 36393,",
-  district: "Northcote 0748,",
-  city: "Auckland,",
-  country: "New Zealand",
-  phone: "021 202 335",
-  email: "nzgezilin@gmail.com",
-  copyright: "Copyright © 2015 LYNN. All Rights Reserved."
-};
+function mapStateToProps(state) {
+  console.log(state);
+  let {info} = state.info;
+
+  return  {info};
+}
+
+export default connect(mapStateToProps)(Contact);

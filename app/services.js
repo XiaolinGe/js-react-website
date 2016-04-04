@@ -1,5 +1,6 @@
 import React from 'react';
 import './services.scss';
+import { connect } from 'react-redux';
 import { Grid, Row, Col, Image, ResponsiveEmbed} from 'react-bootstrap';
 
 
@@ -11,8 +12,8 @@ export default class Services extends  React.Component {
   }
 
   render() {
-    let portfolio = this.props.portfolio;
-    console.log(portfolio);
+    let {services} = this.props;
+
     return (
       <div>
       <div className="layout_banner">
@@ -23,11 +24,11 @@ export default class Services extends  React.Component {
       <Row className="show-grid" >
       <Col md={3}>
       </Col>
-        {services.map( ({href, src, alt, id},index) =>
+      {services.map( ({href, src, alt, portfolio_id},index) =>
           (
             <Col md={3} key={index} className="services_single">
             <a href={href}>
-            <Image src={src} responsive alt={alt} id={id} className="portfolio_image" />
+            <Image src={src} responsive alt={alt} id={portfolio_id} className="portfolio_image" />
             </a>
             </Col>
           ))}
@@ -41,9 +42,11 @@ export default class Services extends  React.Component {
 };
 
 
+function mapStateToProps(state) {
+  let {services} = state.info;
 
 
-let services = [
-  {href: "#", src: "workImages/dutchdelight.jpg", alt: "mekongBaby", id: "mekongBaby"},
-  {href: "#", src: "workImages/jstea.jpg", alt: "jstea", id: "jstea"}
-  ];
+  return {services};
+}
+
+export default connect(mapStateToProps)(Services);

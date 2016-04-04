@@ -7,7 +7,6 @@
         "country": "New Zealand",
         "phone": "021 202 335",
         "email": "nzgezilin@gmail.com",
-        "copyright": "Copyright © 2015 LYNN. All Rights Reserved.",
         "logo": "logo.png",
         "wechat": "weixin.jpg"
     },
@@ -37,24 +36,24 @@
     ],
 
     "portfolio": [
-        {"href": "#", "src": "workImages/mekongBaby.jpg", "alt": "mekongBaby", "id": "mekongBaby"},
-        {"href": "#", "src": "workImages/coffeeLab.jpg", "alt": "coffeeLab", "id": "coffeeLab"},
-        {"href": "#", "src": "workImages/burgerfuel.jpg", "alt": "burgerfuel", "id": "burgerfuel"},
-        {"href": "#", "src": "workImages/dutchdelight.jpg", "alt": "dutchdelight", "id": "dutchdelight"},
+        {"href": "#", "src": "workImages/mekongBaby.jpg", "alt": "mekongBaby", "portfolio_id": "mekongBaby"},
+        {"href": "#", "src": "workImages/coffeeLab.jpg", "alt": "coffeeLab", "portfolio_id": "coffeeLab"},
+        {"href": "#", "src": "workImages/burgerfuel.jpg", "alt": "burgerfuel", "portfolio_id": "burgerfuel"},
+        {"href": "#", "src": "workImages/dutchdelight.jpg", "alt": "dutchdelight", "portfolio_id": "dutchdelight"},
 
-        {"href": "#", "src": "workimages/mimosa.jpg", "alt": "mekongBaby", "id": "mekongBaby"},
-        {"href": "#", "src": "workimages/alfornoitalian.jpg", "alt": "alfornoitalian", "id": "alfornoitalian"},
-        {"href": "#", "src": "workimages/vmaxcafe.jpg", "alt": "vmaxcafe", "id": "vmaxcafe"},
-        {"href": "#", "src": "workimages/glapogenuine.jpg", "alt": "glapogenuine", "id": "glapogenuine"},
+        {"href": "#", "src": "workimages/mimosa.jpg", "alt": "mekongBaby", "portfolio_id": "mekongBaby"},
+        {"href": "#", "src": "workimages/alfornoitalian.jpg", "alt": "alfornoitalian", "portfolio_id": "alfornoitalian"},
+        {"href": "#", "src": "workimages/vmaxcafe.jpg", "alt": "vmaxcafe", "portfolio_id": "vmaxcafe"},
+        {"href": "#", "src": "workimages/glapogenuine.jpg", "alt": "glapogenuine", "portfolio_id": "glapogenuine"},
 
-        {"href": "#", "src": "workimages/vmaxcafe.jpg", "alt": "vmaxcafe", "id": "vmaxcafe"},
-        {"href": "#", "src": "workimages/vmaxcafe.jpg", "alt": "vmaxcafe", "id": "vmaxcafe"},
-        {"href": "#", "src": "workimages/glapogenuine.jpg", "alt": "glapogenuine", "id": "glapogenuine"}
+        {"href": "#", "src": "workimages/vmaxcafe.jpg", "alt": "vmaxcafe", "portfolio_id": "vmaxcafe"},
+        {"href": "#", "src": "workimages/vmaxcafe.jpg", "alt": "vmaxcafe", "portfolio_id": "vmaxcafe"},
+        {"href": "#", "src": "workimages/glapogenuine.jpg", "alt": "glapogenuine", "portfolio_id": "glapogenuine"}
     ],
 
     "services": [
-        {"href": "#", "src": "workImages/dutchdelight.jpg", "alt": "mekongBaby", "id": "mekongBaby"},
-        {"href": "#", "src": "workImages/jstea.jpg", "alt": "jstea", "id": "jstea"}
+        {"href": "#", "src": "workImages/dutchdelight.jpg", "alt": "mekongBaby", "portfolio_id": "mekongBaby"},
+        {"href": "#", "src": "workImages/jstea.jpg", "alt": "jstea", "portfolio_id": "jstea"}
     ],
 
     "faq": [
