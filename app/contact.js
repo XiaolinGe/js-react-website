@@ -11,7 +11,7 @@ export default class Contact extends React.Component {
   }
 
   render() {
-    let {info} = this.props;
+    let {infos} = this.props;
     return (
       <div>
       <div className="layout_banner">
@@ -21,16 +21,16 @@ export default class Contact extends React.Component {
       <Row className="show-grid">
 
       <Col  md={3} className="contact_info">
-      <Image src={info.logo} responsive alt="logo" className="contact_logo"  />
+      <Image src={infos.logo} responsive alt="logo" className="contact_logo"  />
       <br />
       <p>
-      {info.pobox}<br />
-      {info.district}<br />
-      {info.city}<br />
-      {info.country}<br /><br />
+      {infos.pobox}<br />
+      {infos.district}<br />
+      {infos.city}<br />
+      {infos.country}<br /><br />
 
-      Phone:  <a href={'tel:'+info.phone}>  &nbsp;{info.phone}</a><br />
-      Email: <a href={'mailto:'+info.email}> &nbsp;{info.email}</a>
+      Phone:  <a href={'tel:'+infos.phone}>  &nbsp;{infos.phone}</a><br />
+      Email: <a href={'mailto:'+infos.email}> &nbsp;{infos.email}</a>
       </p>
       <a className="facebook" href="https://www.facebook.com/jibblenz" target="_blank">Facebook</a><br />
       <Image src="images/trusted-photos-large.png" responsive alt="Google Business Photos Trusted Photographer" className="trusted"  />
@@ -61,10 +61,9 @@ export default class Contact extends React.Component {
 
 
 function mapStateToProps(state) {
-  console.log(state);
-  let {info} = state.info;
+  let {infos} = state.info;
 
-  return  {info};
+  return  {infos};
 }
 
 export default connect(mapStateToProps)(Contact);

@@ -27,9 +27,9 @@ class Header extends React.Component {
 
   
   render() {
-    let {info,language,menu} = this.props;
-    let {logo} = info;
-    let navLanguage =Object.keys(language).length;
+    let {infos,languages,menus} = this.props;
+    let {logo} = infos;
+    let navLanguage =Object.keys(languages).length;
     let menu_element = $( ".menu_element");
     menu_element.click(function(){
       menu_element.removeClass('active');
@@ -47,13 +47,13 @@ class Header extends React.Component {
       </Navbar.Header>
       <Navbar.Collapse>
       <Nav>
-      {menu.map( ({link,display},index) =>
-        (<NavItem key={index}  eventKey={index} ><Link  key={index} to={link} className="menu_element">{display}</Link></NavItem>)
+      {menus.map( ({url,display},index) =>
+        (<NavItem key={index}  eventKey={index} ><Link  key={index} to={url} className="menu_element">{display}</Link></NavItem>)
       )}
       </Nav>
       <Nav pullRight>
       <NavDropdown eventKey={navLanguage} title="Language" id="basic-nav-dropdown">
-      {language.map( ({language},index) => (<MenuItem key={index} eventKey={2.+{index}} className="language_element">{language}</MenuItem>) )}
+      {languages.map( ({language},index) => (<MenuItem key={index} eventKey={2.+{index}} className="language_element">{language}</MenuItem>) )}
       </NavDropdown>
       </Nav>
       </Navbar.Collapse>
@@ -71,8 +71,8 @@ class Footer extends React.Component {
   }
 
   render() {
-    let {info,footerMenu} = this.props;
-    let {logo,wechat} = info;
+    let {infos,footerMenus} = this.props;
+    let {logo,wechat} = infos;
     
     return (
       <Grid className="footer" >
@@ -97,23 +97,23 @@ class Footer extends React.Component {
       <Image src={wechat} alt="wechat" className='wechat' responsive />
       </Col>
       <Col  md={3} className="footer_info">
-      <p>{info.name}</p>
+      <p>{infos.name}</p>
       <span>
-      {info.pobox}<br />
-      {info.district}<br />
-      {info.city}<br />
-      {info.country}<br /><br />
+      {infos.pobox}<br />
+      {infos.district}<br />
+      {infos.city}<br />
+      {infos.country}<br /><br />
 
-      Phone:  <a href={'tel:'+info.phone}>  &nbsp;{info.phone}</a><br />
-      Email: <a href={'mailto:'+info.email}> &nbsp;{info.email}</a>
+      Phone:  <a href={'tel:'+infos.phone}>  &nbsp;{infos.phone}</a><br />
+      Email: <a href={'mailto:'+infos.email}> &nbsp;{infos.email}</a>
       </span>
       </Col>
       <Col  md={7} className="footer_menu">
       <ul>
-      {footerMenu.map( ({link,display},index) =>
+      {footerMenus.map( ({url,display},index) =>
         (
           <li key={index}>                 
-          <Link to={link}  id={'footer_'+display}>{display}</Link>
+          <Link to={url}  id={'footer_'+display}>{display}</Link>
           </li>
         ) )}
 
@@ -134,12 +134,12 @@ class Footer extends React.Component {
 
 export default class Layout extends React.Component {
   render() {
-    let {menu,language,info,footerMenu} = this.props;
+    let {menus,languages,infos,footerMenus} = this.props;
     return (
       <div>
-      <Header menu={menu} language={language} info={info}/>
+      <Header menus={menus} languages={languages} infos={infos}/>
       {this.props.children}
-      <Footer info={info} footerMenu={footerMenu} />
+      <Footer infos={infos} footerMenus={footerMenus} />
       </div>);
   }
 };
@@ -148,13 +148,13 @@ export default class Layout extends React.Component {
 
 function mapStateToProps(state) {
   console.log(state);
-  let {info,menu,language,footerMenu,portfolio,services,faq,work} = state.info;
+  let {infos,menus,languages,footerMenus,portfolios,services,faqs} = state.info;
 
   let layout = {
-    info: info,
-    menu: menu,
-    language: language,
-    footerMenu: footerMenu
+    infos: infos,
+    menus: menus,
+    languages: languages,
+    footerMenus: footerMenus
   };
   return layout;
 }

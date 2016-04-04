@@ -24,11 +24,11 @@ export default class Services extends  React.Component {
       <Row className="show-grid" >
       <Col md={3}>
       </Col>
-      {services.map( ({href, src, alt, portfolio_id},index) =>
+      {services.map( ({url, image, title},index) =>
           (
             <Col md={3} key={index} className="services_single">
-            <a href={href}>
-            <Image src={src} responsive alt={alt} id={portfolio_id} className="portfolio_image" />
+            <a href={url}>
+            <Image src={image} responsive alt={title} className="portfolio_image" />
             </a>
             </Col>
           ))}

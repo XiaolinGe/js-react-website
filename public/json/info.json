@@ -1,5 +1,5 @@
 {
-    "info": {
+    "infos": {
         "name": "Lynn",
         "pobox": "PO Box 36393,",
         "district": "Northcote 0748,",
@@ -10,53 +10,47 @@
         "logo": "/images/logo.png",
         "wechat": "/images/weixin.jpg"
     },
-    "menu": [
-        {"link": "/home", "display": "home"},
-        {"link": "/about", "display": "about"},
-        {"link": "/portfolio", "display": "portfolio"},
-        {"link": "/services", "display": "services"},
-        {"link": "/faq", "display": "faq"},
-        {"link": "/contact", "display": "contact"}
+    "menus": [
+        {"url": "/home", "display": "home"},
+        {"url": "/about", "display": "about"},
+        {"url": "/portfolio", "display": "portfolio"},
+        {"url": "/services", "display": "services"},
+        {"url": "/faq", "display": "faq"},
+        {"url": "/contact", "display": "contact"}
     ],
 
-    "language": [
+    "languages": [
         {"language": "English"},
         {"language": "Chinese"},
         {"language": "Japnese"}
     ],
 
-    "footerMenu": [
-        {"link": "/home", "display": "home"},
-        {"link": "/about", "display": "about"},
-        {"link": "/portfolio", "display": "portfolio"},
-        {"link": "/services", "display": "services"},
-        {"link": "/faq", "display": "faq"},
-        {"link": "/contact", "display": "contact"},
-        {"link": "#", "display": "facebook"}
+    "footerMenus": [
+        {"url": "/home", "display": "home"},
+        {"url": "/about", "display": "about"},
+        {"url": "/portfolio", "display": "portfolio"},
+        {"url": "/services", "display": "services"},
+        {"url": "/faq", "display": "faq"},
+        {"url": "/contact", "display": "contact"},
+        {"url": "#", "display": "facebook"}
     ],
+    "portfolios": [
+        {"url": "#", "image": "/workImages/mekongBaby.jpg", "title": "mekongBaby"},
+        {"url": "#", "image": "/workImages/coffeeLab.jpg", "title": "coffeeLab"},
+        {"url": "#", "image": "/workImages/burgerfuel.jpg", "title": "burgerfuel"},
+        {"url": "#", "image": "/workImages/dutchdelight.jpg", "title": "dutchdelight"},
 
-    "portfolio": [
-        {"href": "#", "src": "/workImages/mekongBaby.jpg", "alt": "mekongBaby", "portfolio_id": "mekongBaby"},
-        {"href": "#", "src": "/workImages/coffeeLab.jpg", "alt": "coffeeLab", "portfolio_id": "coffeeLab"},
-        {"href": "#", "src": "/workImages/burgerfuel.jpg", "alt": "burgerfuel", "portfolio_id": "burgerfuel"},
-        {"href": "#", "src": "/workImages/dutchdelight.jpg", "alt": "dutchdelight", "portfolio_id": "dutchdelight"},
-
-        {"href": "#", "src": "/workimages/mimosa.jpg", "alt": "mekongBaby", "portfolio_id": "mekongBaby"},
-        {"href": "#", "src": "/workimages/alfornoitalian.jpg", "alt": "alfornoitalian", "portfolio_id": "alfornoitalian"},
-        {"href": "#", "src": "/workimages/vmaxcafe.jpg", "alt": "vmaxcafe", "portfolio_id": "vmaxcafe"},
-        {"href": "#", "src": "/workimages/glapogenuine.jpg", "alt": "glapogenuine", "portfolio_id": "glapogenuine"},
-
-        {"href": "#", "src": "/workimages/vmaxcafe.jpg", "alt": "vmaxcafe", "portfolio_id": "vmaxcafe"},
-        {"href": "#", "src": "/workimages/vmaxcafe.jpg", "alt": "vmaxcafe", "portfolio_id": "vmaxcafe"},
-        {"href": "#", "src": "/workimages/glapogenuine.jpg", "alt": "glapogenuine", "portfolio_id": "glapogenuine"}
+        {"url": "#", "image": "/workimages/alfornoitalian.jpg", "title": "alfornoitalian"},
+        {"url": "#", "image": "/workimages/vmaxcafe.jpg", "title": "vmaxcafe"},
+        {"url": "#", "image": "/workimages/glapogenuine.jpg", "title": "glapogenuine"}
     ],
 
     "services": [
-        {"href": "#", "src": "/workImages/dutchdelight.jpg", "alt": "mekongBaby", "portfolio_id": "mekongBaby"},
-        {"href": "#", "src": "/workImages/jstea.jpg", "alt": "jstea", "portfolio_id": "jstea"}
+        {"url": "#", "image": "/workImages/dutchdelight.jpg", "title": "mekongBaby", "portfolio_id": "mekongBaby"},
+        {"url": "#", "image": "/workImages/jstea.jpg", "title": "jstea", "portfolio_id": "jstea"}
     ],
 
-    "faq": [
+    "faqs": [
         {"question": "How do I use the images on my own site?",
          "answer": "Google Maps API allows simple, easy sharing. This is a great idea to do as it means that you are getting the maximum use out of your investment. Our team will be happy to show you how to do it if you have any questions."
         },

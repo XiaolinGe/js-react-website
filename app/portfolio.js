@@ -10,7 +10,7 @@ export default class Portfolio extends  React.Component {
     super(props);
   }
   render() {
-    let {portfolio} = this.props;
+    let {portfolios} = this.props;
     return (
       <div>
       <div className="layout_banner">
@@ -18,11 +18,11 @@ export default class Portfolio extends  React.Component {
       </div>
       <Grid className="portfolio">
       <Row className="show-grid portfolio_row">
-      {portfolio.map( ({href, src, alt, portfolio_id},index) =>
+      {portfolios.map( ({url, image, title},index) =>
           (
             <Col md={3} key={index} className="portfolio_single">
-            <a href={href}>
-            <Image src={src} responsive alt={alt} id={portfolio_id} className="portfolio_image" />
+            <a href={url}>
+            <Image src={image} responsive alt={title}  className="portfolio_image" />
             </a>
             </Col>
             ) ) }
@@ -36,9 +36,9 @@ export default class Portfolio extends  React.Component {
 
 function mapStateToProps(state) {
 
-  let {portfolio} = state.info;
+  let {portfolios} = state.info;
 
-  return {portfolio};
+  return {portfolios};
 }
 
 export default connect(mapStateToProps)(Portfolio);
