@@ -1,0 +1,81 @@
+@import './common.scss';
+
+
+.contact {
+
+    @include limit;
+
+    .contact_info {
+        @include no_mp;
+        margin-bottom: 20px;
+        .logo {
+            @include no_mp;
+            display: block;
+            border: 0;
+            margin-bottom: 20px;
+        }
+        p {
+            @include text_font;
+            display: block;
+            margin-bottom: 20px;
+
+            a {
+                color: $ctext;
+            }
+        }
+        a {
+            color: $ctheme;
+        }
+        .trusted {
+            display: block;
+            margin: 20px 0;
+            padding: 0;
+            border: 0;
+        }
+    }
+}
+
+
+.contact_form{
+    @include left_dashed;
+    margin: 40px 0;
+    margin-top: 0;
+    p {
+        @include text_font;
+        margin: 0;
+        margin-bottom: 15px;
+        font-size: 24px;
+        color: $ctheme;
+    }
+    form {
+        width: 247px;
+        margin-left: 15px;
+    }
+}
+
+
+.btn-primary {
+    @include border_radius;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 1px rgba(0,0,0,.25);
+    line-height: 26px;
+    width: 100%;
+    background: $ctheme;
+    border-color: #21a69f;
+    &:visited {background: #21a69f;  border-color: #21a69f;}
+    &:hover {background: #21a69f;  border-color: #21a69f;}
+    &:active {background: #21a69f;  border-color: #21a69f;}
+}
+
+
+.contact_map {
+    @include left_dashed;
+    height: 390px;
+    margin: 40px 0;
+    margin-top: 0;
+}

@@ -1,0 +1,6 @@
+@import './common.scss';
+
+.services {
+    @include limit;
+    padding-bottom: 20px;
+}

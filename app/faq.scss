@@ -1,0 +1,50 @@
+@import './common.scss';
+
+
+.faq {
+    @include limit;
+
+    .faq_image {
+        @include no_mp;
+        margin-bottom: 20px;
+        h2 {
+            margin: 0;
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 100%;
+            margin-bottom: 15px;
+            color: $ctext;
+        }
+        p {
+            @include text_font;
+            display: block;
+            margin-bottom: 20px;
+
+        }
+        .trusted {
+            @include no_mp;
+            display: block;
+            border: 0;
+        }
+    }
+    .faq_intro {
+        @include left_dashed;
+        div {
+    margin: -35px 0 50px 0;
+             h3 {
+            font-size: 21px;
+            font-weight: 700;
+            color: $ctheme;
+            line-height: 100%;
+            padding: 15px 0;
+        }
+        p {
+            @include text_font;
+            line-height: 150%;
+            margin-bottom: 15px;
+
+        }
+        }
+
+    }
+}

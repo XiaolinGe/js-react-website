@@ -1,0 +1,234 @@
+@import './common.scss';
+
+
+.index_banner {
+    @include no_mp;
+    width: 100%;
+    height: 790px;
+    background: url("../public/images/slide-01-bg.jpg") no-repeat top left;
+    background-size: 110% 100%;
+    .banner_images {
+        height: 600px;
+        .trusted {
+            position: absolute;
+            top: 150px;
+            left: 0;
+        }
+
+    }
+}
+
+
+#macbook {
+    position: absolute;
+    top: 150px;
+    left: 10%;
+    z-index: 5;
+}
+
+#ipad {
+    position: absolute;
+    top: 280px;
+    left: 0;
+    z-index: 1;
+}
+
+#iphone {
+    position: absolute;
+    top: 370px;
+    left: 63%;
+    z-index: 7;
+}
+
+#popup {
+    position: absolute;
+    top: 150px;
+    left: 56%;
+    z-index: 8;
+}
+
+#professional_text {
+    color: #ffffff;
+    font-weight: 200;
+    font-family: $ff;
+    margin: 0 auto;
+    padding-top: 120px;
+    font-size: 23px;
+    text-align: center;
+}
+
+
+
+
+.row{
+    @include no_mp;
+}
+
+
+
+#green_button {
+    background: $cgreen;
+}
+
+#blue_button {
+    background: $cblue;
+}
+
+#red_button {
+    background: $cred;
+}
+
+#orange_button {
+    background: $cliblue;
+}
+
+
+
+
+.index_button {
+    width: 75%;
+    border-bottom: dashed 1px #d0d0d0;
+    margin: 0 auto;
+    padding: 0;
+}
+
+    .single_button {
+        @include border_radius;
+        width: 237px;
+        display: block;
+        padding: 0 0 4px 0;
+        text-decoration: none;
+        margin: 20px auto;
+
+        span {
+            @include border_radius;
+            display: block;
+            font-size: 13px;
+            font-weight: 400;
+            font-family: $ff;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 0 1px rgba(0,0,0,.25);
+            line-height: 17px;
+            height: 48px;
+            padding: 8px 0 0 0;
+            width: 237px;
+            background: $cligray;
+            &:hover { background: $cdagray;}
+        }
+    }
+
+.index_work,
+.index_whyUs
+ {
+     @include limit;
+     border-bottom: dashed 1px #d0d0d0;
+     margin: 0 auto;
+     .work_intro,
+     .whyUs_intro
+      {
+          height: 160px;
+
+          h2 {
+              font-size: 21px;
+              font-weight: 400;
+              line-height: 100%;
+              margin: 0;
+              margin-bottom: 15px;
+              color: $ctext;
+          }
+
+          p {
+              @include text_font;
+              display: block;
+              margin-bottom: 20px;
+          }
+          a{
+              display: block;
+              font-size: 14px;
+              font-weight: 600;
+              color: $ctheme;
+              float: left;
+              clear: both;
+              margin-top: 30px;
+          }
+      }
+
+ }
+
+
+.work_intro{
+    margin: 20px auto;
+}
+
+.whyUs_intro {
+    margin: 0 0 20px 0;
+}
+
+
+
+.whyUs_image{
+    width: 173px;
+    height: 133px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.whyUs_explain {
+    h4 {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 100%;
+        margin: 0;
+        color: $cblue;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+    p {
+        line-height: 150%;
+        color: $ctext;
+    }
+}
+
+
+.index_ourVideos {
+    width: 75%;
+    margin: 20px auto;
+    padding: 20px 0;
+    padding-bottom: 0;
+
+    .ourVideos_intro{
+
+        h2{
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 100%;
+            margin-bottom: 15px;
+            color: $ctext;
+        }
+
+        p {
+            @include text_font
+            display: block;
+            margin-bottom: 20px;
+
+        }
+    }
+}
+
+.ourVideos_button {
+    span {
+        padding: 16px 0 0 0;
+    }
+}
+
+.index_videos{
+    width: 75%;
+    margin: 20px auto;
+    padding: 40px 0;
+    .videos {
+        margin-bottom: 10px;
+    }
+
+}

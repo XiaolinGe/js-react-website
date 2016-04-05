@@ -1,0 +1,126 @@
+$ctheme: #2ebdb6;
+$ctext: #585858;
+$ct: transparent;
+
+$cgreen: #53aa46;
+$cblue: #0085c8;
+$cred: #e51751;
+$cliblue: #2ebdb6;
+
+$cligray: #575757;
+$cdagray: #3c3c3c;
+
+$ff: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+$debug: true;
+
+@mixin debug-border { border: 1px solid red; }
+
+html, body {
+    margin: 0 auto;
+    height: 100%;
+}
+
+
+@mixin limit {
+    width: 75%;
+    margin: 20px auto;
+    padding: 40px 0;
+}
+
+
+@mixin no_mp {
+    margin: 0;
+    padding: 0;
+}
+
+
+@mixin left_dashed {
+    float: left;
+    border-left: dashed 1px #d0d0d0;
+    padding: 0 0 0 40px;
+}
+
+@mixin text_font {
+    line-height: 140%;
+    font-family: $ff;
+    font-size: 12px;
+    font-weight: 400;
+    color: $ctext;
+}
+
+@mixin border_radius {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+@-webkit-keyframes fadeInUp  /*Safari and Chrome*/ {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+
+.fadeInUp {
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+
+.fadeInUp {
+    animation: fadeInUp;
+    -webkit-animation: fadeInUp;/*Safari and Chrome*/
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+
+.layout_banner {
+    width: 100%;
+    height: 280px;
+    @include no_mp;
+    background: url("../public/images/slide-01-bg.jpg") no-repeat top left;
+
+    h1 {
+        font-size: 700%;
+        font-weight: 800;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 205px;
+        letter-spacing: -1px;
+        padding: 55px 0 0 0;
+        margin: 0;
+    }
+}
