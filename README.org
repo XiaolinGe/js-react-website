@@ -1,6 +1,6 @@
 * Description
 
-This is a customer front end website developed by React, React-Bootstrap, SASS, Redux,  React Router and Webpack. 
+This is a customer front-end website developed by React, React-Bootstrap, SASS, Redux,  React Router and Webpack. 
 
 * Quick Start
 
