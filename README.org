@@ -34,19 +34,12 @@ Flux is the application architecture for building client-side web applications. 
 Redux is a predictable state container for JavaScript apps.
 
 
-(Store)          (React)
-app state  -->  components        -->    DOM
- ^                                        |
- |                                        v
- reducers <--------------(dispatch action{type:??,action params})
-  ((prev state, action)=> next state)
+[[[[./images/redux.png]]]]
 
 
 ** React Router
 
 React-router is a complete routing library for React. It keeps your UI in sync with the URL. 
-
-
 
 
 
