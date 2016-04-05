@@ -1,11 +1,12 @@
 * Description
 
-This is a customer front-end website developed by React, React-Bootstrap, SASS, Redux,  React Router and Webpack. 
+This is a customer front-end website project developed by React, React-Bootstrap, SASS, Redux,  React Router and Webpack. 
 
 * Quick Start
 
 #+BEGIN_SRC javascript
  git clone https://github.com/XiaolinGe/js-website.git
+
  npm run dev
 #+END_SRC
 
@@ -34,7 +35,7 @@ Flux is the application architecture for building client-side web applications. 
 Redux is a predictable state container for JavaScript apps.
 
 
-[[[[./images/redux.png]]]]
+[[./images/redux.png]]
 
 
 ** React Router
