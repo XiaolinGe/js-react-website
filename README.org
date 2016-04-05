@@ -1,6 +1,6 @@
 * Description
 
-This is a customer front end website developed using React, React-Bootstrap, SASS, Redux,  React Router and Webpack. 
+This is a customer front-end website developed by React, React-Bootstrap, SASS, Redux,  React Router and Webpack. 
 
 * Quick Start
 
@@ -14,25 +14,25 @@ This is a customer front end website developed using React, React-Bootstrap, SAS
 
 ** Webpack
 
-
-*** Webpack is module bundler, it takes your dependencies, puts them through loaders and outputs browser compatible static assets. All of this is based on configuration.
+Webpack is module bundler, it takes your dependencies, puts them through loaders and outputs browser compatible static assets. All of this is based on configuration.
 
 ** SASS/CSS
 
-*** Sass is css preprocessor, it is an extension of CSS that allows you to use variables, nested rules, mixins, inline imports, and more, all with a fully CSS-compatible syntax. 
+Sass is css preprocessor, it is an extension of CSS that allows you to use variables, nested rules, mixins, inline imports, and more, all with a fully CSS-compatible syntax. 
  
 
 ** React/ReactBoostrap
 
-*** React is a javascript library for building user interfaces.
+React is a javascript library for building user interfaces.
 
-*** React-Bootstrap is a library of reusable front-end components. It is based on React and Bootstrap.
+React-Bootstrap is a library of reusable front-end components. It is based on React and Bootstrap.
 
 ** Flux/Redux
 
-*** Flux is the application architecture for building client-side web applications. It complements React's composable view components by utilizing a unidirectional data flow.
+Flux is the application architecture for building client-side web applications. It complements React's composable view components by utilizing a unidirectional data flow.
 
-*** Redux is a predictable state container for JavaScript apps.
+Redux is a predictable state container for JavaScript apps.
+
 
 (Store)          (React)
 app state  -->  components        -->    DOM
@@ -41,16 +41,11 @@ app state  -->  components        -->    DOM
  reducers <--------------(dispatch action{type:??,action params})
   ((prev state, action)=> next state)
 
+
 ** React Router
 
-*** React-router is a complete routing library for React. It keeps your UI in sync with the URL. 
+React-router is a complete routing library for React. It keeps your UI in sync with the URL. 
 
-//** NodeJS
-
-//*** Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js采用事件驱动、异步编程，为网络服务而设计
-
-
-//** RESTFul APIs
 
 
 
