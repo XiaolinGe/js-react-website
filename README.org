@@ -1,11 +1,11 @@
 * Description
 
-This is a customer front-end website project developed by React, React-Bootstrap, SASS, Redux,  React Router and Webpack. 
+This is a customer front-end website project developed by React, React-Bootstrap, SASS, Redux, React Router and Webpack.
 
 * Quick Start
 
 #+BEGIN_SRC javascript
- git clone https://github.com/XiaolinGe/js-website.git
+ git clone git@github.com:XiaolinGe/js-react-website.git
 
  npm run dev
 #+END_SRC
